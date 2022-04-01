@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, on-prem' 
+summary: オンプレミスの ONTAP クラスタの新機能をご確認ください。 
+---
+= オンプレミス ONTAP クラスタの新機能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+オンプレミスの ONTAP クラスタの新機能をご確認ください。
+
+
+
+== 2022 年 2 月 27 日
+
+
+
+=== 「社内 ONTAP 」タブはデジタルウォレットで使用できます。
+
+オンプレミスの ONTAP クラスタのインベントリと、ハードウェアおよびサービス契約の有効期限を確認できるようになりました。クラスタに関するその他の詳細も確認できます。
+
+link:task-discovering-ontap.html#viewing-cluster-information-and-contract-details["この重要なオンプレミスクラスタの情報を表示する方法を参照してください"]。クラスタ用のネットアップサポートサイトのアカウント（ NSS ）が必要です。また、 NSS のクレデンシャルを Cloud Manager アカウントに接続する必要があります。
+
+
+
+== 2022 年 1 月 11 日
+
+
+
+=== オンプレミスの ONTAP クラスタのボリュームに追加するタグは、 Tagging サービスで使用できます。
+
+ボリュームに追加するタグは、アプリケーションテンプレートサービスのタグ機能に関連付けられます。これにより、リソースの管理を整理して簡単にすることができます。
+
+
+
+== 2021 年 11 月 28 日
+
+
+
+=== オンプレミスの ONTAP クラスタ向けのボリューム作成ウィザードが簡易化されました
+
+使いやすいようにボリューム作成ウィザードが再設計され、カスタムのエクスポートポリシーを選択できるようになりました。
+
+
+
+== 2021 年 3 月 8 日
+
+
+
+=== Active IQ サービスで利用できるオンプレミスの ONTAP クラスタ情報
+
+* Active IQ が（ NSS アカウントに基づいて）オンプレミスクラスタのリストを表示したら、ボタンをクリックしてに切り替えることができます link:task-discovering-ontap.html#discovering-clusters-from-the-discovery-page["クラスタを検出"^] Cloud Manager キャンバスに追加します。これにより、すべてのストレージシステムを Cloud Manager で簡単に管理できるようになります。
+* 1 つ以上のクラスタでファームウェアの更新が必要であると Active IQ が判断したら、ボタンをクリックして、を選択します link:task-managing-ontap.html#downloading-new-disk-and-shelf-firmware["Ansible プレイブックをダウンロードし、クラスタファームウェアをアップグレードします"^]。
+* 新しい link:task-managing-ontap.html#viewing-on-prem-workloads-that-are-candidates-for-the-cloud["クラウド対応ワークロードタブ"^] オンプレミスの ONTAP クラスタからクラウドに移行するのに最適と特定したワークロードまたはボリュームのリストが表示されます。これらのボリュームの一部を移動すると、コストが削減され、パフォーマンスと耐障害性が向上する可能性があります。
++
+を参照してください link:https://www.netapp.com/knowledge-center/what-is-lift-and-shift["リフトとシフトとは何ですか？"]
+
+

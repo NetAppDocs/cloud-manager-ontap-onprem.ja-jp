@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: task-remove-on-prem.html 
+keywords: ontap, cluster, remove, delete, remove ontap cluster, remove onprem, delete cluster, delete working environment, remove working environment 
+summary: オンプレミスの ONTAP 作業環境を Cloud Manager から管理する必要がなくなった場合は、環境を削除します。 
+---
+= オンプレミスの ONTAP 作業環境を削除
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+オンプレミスの ONTAP 作業環境を Cloud Manager から管理する必要がなくなった場合は、環境を削除します。
+
+作業環境を削除しても、 ONTAP クラスタには影響しません。作業環境は、 Cloud Manager からいつでも再検出できます。
+
+.手順
+. キャンバスページで、オンプレミス ONTAP 作業環境の名前をダブルクリックします。
+. メニューアイコンをクリックし、 * 削除 * を選択します。
++
+image:screenshot_remove_onprem.png["ページの右上にあるメニューと [ 削除 ] オプションを示すスクリーンショット。"]
+
+. [ 削除（ Remove ） ] をクリックして確定します。
+

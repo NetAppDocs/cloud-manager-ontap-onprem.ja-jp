@@ -1,0 +1,15 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: Manage your NetApp AFF and FAS systems through Cloud Manager to provision storage, replicate data, and configure critical cloud-based data services. 
+summary: Cloud Manager を使用して NetApp AFF システムと FAS システムを管理し、ストレージのプロビジョニング、データのレプリケート、重要なクラウドベースデータサービスの設定を行います。 
+---
+= オンプレミスの ONTAP クラスタに関するドキュメント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

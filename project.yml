@@ -1,0 +1,69 @@
+---
+settings:
+  name: On-prem ONTAP clusters
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ja-jp,us-en,zh-cn,ko-kr
+sidebar:
+  entries:
+  - title: Cloud Manager のすべてのドキュメント
+    url: https://docs.netapp.com/us-en/cloud-manager-family
+  - title: オンプレミスの ONTAP クラスタのドキュメント
+    url: "/index.html"
+  - title: リリースノート
+    url: "/whats-new.html"
+  - title: はじめに
+    entries:
+    - title: ONTAP クラスタを検出
+      url: "/task-discovering-ontap.html"
+  - title: オンプレミスの ONTAP クラスタを管理
+    entries:
+    - title: オンプレミスの ONTAP ボリュームを管理
+      url: "/task-provisioning-ontap.html"
+    - title: Active IQ Digital Advisor を使用してクラスタを最適化します
+      url: "/concept-aiq-digital-advisor.html"
+    - title: Active IQ データを使用してクラスタを管理します
+      url: "/task-managing-ontap.html"
+    - title: オンプレミスクラスタに接続
+      url: "/task-connect-to-onprem.html"
+    - title: オンプレミスの ONTAP 作業環境を削除
+      url: "/task-remove-on-prem.html"
+  - title: 知識とサポート
+    entries:
+    - title: サポートに登録します
+      url: "/task-support-registration.html"
+    - title: ヘルプを表示します
+      url: "/task-get-help.html"
+  - title: 法的通知
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: はじめに
+    links:
+    - title: 検出されたオンプレミスクラスタと検出されていないオンプレミスクラスタを表示
+      url: task-discovering-ontap.html#viewing-discovered-and-undiscovered-on-prem-clusters
+    - title: ONTAP クラスタを検出
+      url: task-discovering-ontap.html
+    - title: 新機能
+      url: whats-new.html
+  - title: オンプレミスの ONTAP クラスタを管理
+    links:
+    - title: ボリュームを作成します
+      url: task-provisioning-ontap.html
+    - title: 新しいディスクファームウェアとシェルフファームウェアをダウンロードします
+      url: task-managing-ontap.html#downloading-new-disk-and-shelf-firmware
+    - title: System Manager と CLI を使用して、オンプレミスの ONTAP システムを管理します
+      url: task-connect-to-onprem.html
+  - title: ブログコミュニティ
+    links:
+    - title: ネットアップコミュニティ
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Cloud Central のブログです
+      url: https://cloud.netapp.com/blog
+    - title: クラウドに関する Web セミナー
+      url: https://cloud.netapp.com/events
+product-family: {}

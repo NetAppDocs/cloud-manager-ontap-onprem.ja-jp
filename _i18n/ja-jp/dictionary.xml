@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">ネットアップテクニカルサポートでサポートケースをオープンするには、事前に Cloud Manager にネットアップサポートサイトのアカウントを追加し、サポートに登録しておく必要があります。</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">サポートに登録します</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link-macro"></block>
+  <block id="d53e2559d6ace0e907fc57192bf286b6" category="paragraph"><block ref="d53e2559d6ace0e907fc57192bf286b6" category="inline-link-macro-rx"></block></block>
+  <block id="09a149a5c5d747e4952df900eab14719" category="summary">オンプレミスの ONTAP 作業環境を Cloud Manager から管理する必要がなくなった場合は、環境を削除します。</block>
+  <block id="833397a222b2d3624761a8e68a721fd5" category="doc">オンプレミスの ONTAP 作業環境を削除</block>
+  <block id="f23bd56e3b5d6f7f6472fcb2b4cd3d5a" category="paragraph">作業環境を削除しても、 ONTAP クラスタには影響しません。作業環境は、 Cloud Manager からいつでも再検出できます。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
+  <block id="0280e7f2fa84bc4f3c493a7a89c90d28" category="list-text">キャンバスページで、オンプレミス ONTAP 作業環境の名前をダブルクリックします。</block>
+  <block id="80e3b13d71092100ec711ddee84d23a4" category="list-text">メニューアイコンをクリックし、 * 削除 * を選択します。</block>
+  <block id="82efd2783df66726ca1b3a680a181ac8" category="inline-image-macro">ページの右上にあるメニューと [ 削除 ] オプションを示すスクリーンショット。</block>
+  <block id="fdc54b68e260b5861ecabd7cfd437124" category="paragraph"><block ref="fdc54b68e260b5861ecabd7cfd437124" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40b851aafab82c78484c46169f816fd2" category="list-text">[ 削除（ Remove ） ] をクリックして確定します。</block>
+  <block id="21bba0a7398f9083f3d50b42a5504b37" category="summary">Cloud Manager では、オンプレミス環境、ネットアップのプライベートストレージ構成、 IBM クラウド内の ONTAP クラスタを検出できます。オンプレミスクラスタを Cloud Manager キャンバスに追加すると、 Cloud Volumes ONTAP やその他のクラウドストレージソリューションと同じツールを使用して、これらのクラスタを管理できます。</block>
+  <block id="99cef0e0b5f9d9d8e28e23f9098ec0b6" category="doc">オンプレミスの ONTAP クラスタを検出しています</block>
+  <block id="a22cdf185b246eb453267216a656867b" category="paragraph">これらのシステムのストレージをプロビジョニングできるだけでなく、 Cloud Manager にこれらのシステムを追加することで、ハードウェアとソフトウェアの契約ステータス情報をデジタルウォレットで簡単に確認し、これらのクラスタに重要なクラウドベースサービスを設定できます。具体的には、クラウドへのデータのレプリケート、クラウドへのデータのバックアップ、クラウドへのコールドデータの階層化、そのデータに対するコンプライアンススキャンの実行です。</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">要件</block>
+  <block id="1f4a04b80ac0fff1532fab464942b834" category="list-text">クラウドプロバイダまたはオンプレミスにインストールされたコネクタ。</block>
+  <block id="cb754929bd2884eb53bfc39ddd5aadad" category="paragraph">コールドデータをクラウドに階層化する場合は、コールドデータの階層化先に基づいてコネクタの要件を確認してください。</block>
+  <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">コネクタについて説明します</block>
+  <block id="da1264a616f156bd6836a85f7dfdea5a" category="list-text"><block ref="da1264a616f156bd6836a85f7dfdea5a" category="inline-link-rx"></block></block>
+  <block id="c870531773e82c374eb4125c8029e25e" category="inline-link">コネクタ間の切り替え</block>
+  <block id="74d39f4b6fe0e32c5cfa2ed86891bf44" category="list-text"><block ref="74d39f4b6fe0e32c5cfa2ed86891bf44" category="inline-link-rx"></block></block>
+  <block id="36afa058c74d288178950c27927bdb38" category="inline-link">Cloud Tiering の詳細をご確認ください</block>
+  <block id="4a88b41a42a9618291028593ae2a0b05" category="list-text"><block ref="4a88b41a42a9618291028593ae2a0b05" category="inline-link-rx"></block></block>
+  <block id="b4ffcf033604873104ed7bd60333e4fc" category="list-text">クラスタを Cloud Manager に追加するための、クラスタ管理 IP アドレスと管理者ユーザアカウントのパスワード。</block>
+  <block id="231fa707099b15748dcedaa672a38da0" category="paragraph">Cloud Manager は、 HTTPS を使用して ONTAP クラスタを検出します。カスタムファイアウォールポリシーを使用する場合は、次の要件を満たす必要があります。</block>
+  <block id="b06972aadece5eaa3ac9cc962a035477" category="list-text">コネクタホストが、ポート 443 経由のアウトバウンド HTTPS アクセスを許可する必要があります。</block>
+  <block id="2b9e44ec073f65b2847ecb4d29f27fb3" category="paragraph">コネクタがクラウドにある場合、すべてのアウトバウンド通信は事前定義されたセキュリティグループによって許可されます。</block>
+  <block id="6f94f90ef34d6e0c2ce0a93e0edc57d7" category="list-text">ONTAP クラスタでは、ポート 443 を介した着信 HTTPS アクセスが許可されている必要があります。</block>
+  <block id="6f9f6c9a212736eda9e7ebc73ff5b991" category="paragraph">デフォルトの「 mgmt 」ファイアウォールポリシーでは、すべての IP アドレスからの着信 HTTPS アクセスが許可されます。このデフォルトポリシーを変更した場合、または独自のファイアウォールポリシーを作成した場合は、 HTTPS プロトコルをそのポリシーに関連付けて、 Connector ホストからのアクセスを有効にする必要があります。</block>
+  <block id="f154773445f5f4ed354ad1d6b1458de0" category="inline-link">NSS アカウントを Cloud Manager に追加します</block>
+  <block id="b91358861e1d424b929dddf5a397bc81" category="list-text">ネットアップサポートサイトの有効なクレデンシャルセット。方法を参照してください<block ref="6ee42390f038b7658fb8dfbbc6c21b14" category="inline-link-rx"></block>。</block>
+  <block id="a629e0a77229bc88612039da60ff1fcb" category="section-title">オンプレミスで検出されたクラスタと検出されていないクラスタを表示する</block>
+  <block id="be46af8b5037a09e14d6aea77aa745d1" category="paragraph">Cloud Manager の _Digital Wallet または _Discovery_service を使用すると、サポート契約を締結しているオンプレミスの ONTAP クラスタを表示、検出、管理できます。</block>
+  <block id="d12f32a1e487926f44cc406fb25ca418" category="paragraph">_Digital Wallet からオンプレミスクラスタとライセンスの詳細を表示するには、次の手順を実行します。</block>
+  <block id="e2f4af182c255caedb431ba0b5e53878" category="list-text">Cloud Manager から、 * Digital Wallet * サービスを選択します。</block>
+  <block id="fdc520fd72025accf572613a40564176" category="list-text">[* On-Premises ONTAP * ] タブをクリックします。</block>
+  <block id="705316ae4d75d35f1e961cab58a5d5df" category="inline-image-macro">オンプレミスの ONTAP クラスタのデジタルウォレットページのスクリーンショット。</block>
+  <block id="7d584a90892954972995f98a62f03440" category="paragraph"><block ref="7d584a90892954972995f98a62f03440" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16e9dbd4a18087ff905686ae9bd7ca44" category="paragraph">ONTAP クラスタが、 Cloud Manager で検出されたかどうかのステータスとともに表示されます。</block>
+  <block id="93416f52fcce3ab7a37ed87d0aeb8134" category="paragraph">ネットアップサポートサイト（ NSS ）アカウントのクレデンシャルを最初に入力するように求められたら、サポートダッシュボードに入力します。アカウントを追加すると、そのアカウントに含まれているクラスタが表示されます。</block>
+  <block id="354f939b57a1918425820055547d8166" category="paragraph">_Discovery サービスからオンプレミスクラスタとライセンスの詳細を表示するには、次の手順を実行します。</block>
+  <block id="d69b7414da10a87e5a3030f220161dfa" category="list-text">Cloud Manager から * Discovery * サービスを選択します。</block>
+  <block id="f1b045e4cf088de8d47b50c99c582e48" category="list-text">必要に応じて、 NSS アカウントに関連付けられた Active IQ ログインを選択します。</block>
+  <block id="0f0ffa8a90cbc52fa86676ccb69096ce" category="inline-image-macro">オンプレミスの ONTAP クラスタのメインの検出ページのスクリーンショット。</block>
+  <block id="04c986062f9c3ab6ca9967dac4c5be0d" category="paragraph"><block ref="04c986062f9c3ab6ca9967dac4c5be0d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b0ae438dbb700ffcab0b452edad46174" category="paragraph">有効なサポート契約がある ONTAP クラスタが、 Cloud Manager で検出されたかどうかを示すステータスで表示されます。</block>
+  <block id="b5e4244593ae3713ba9c349b71c06182" category="inline-link-macro">Active IQ デジタルアドバイザからサポート契約を更新してください</block>
+  <block id="f58334fc97f74b0f9a5bd0fcab804d79" category="admonition">サポート契約が期限切れになると、システムは検出ページから削除されます。ただし、これらのシステムは引き続きそれぞれの作業環境で管理できます。方法を参照してください <block ref="73ab273e50affbed0eaeebe6bee46665" category="inline-link-macro-rx"></block>。</block>
+  <block id="7f50c223930d4a02cade2b9c75256f8f" category="section-title">クラスタ情報と契約の詳細の表示</block>
+  <block id="e6dfd5017eebf97461338fa01b9cb076" category="paragraph">_Digital Wallet _ を使用して、クラスタの詳細、およびハードウェアとソフトウェアの契約ステータスを表示できます。</block>
+  <block id="7d8cc3d1d840829a8cdda42ed1f06341" category="list-text">* デジタルウォレット * で、 * オンプレミス ONTAP * タブをクリックします。</block>
+  <block id="84c2c11254da9ee11c4482a60291186d" category="paragraph">各クラスタの行にソフトウェア契約とハードウェア契約の有効期限が表示されます。</block>
+  <block id="3f844e426a10085ba24d2a77f32144b3" category="list-text">契約が有効期限に近づいている場合や期限が切れている場合は、 Cloud Manager の右下にあるチャットアイコンをクリックして、契約の延長を申請できます。</block>
+  <block id="ddd53e8927c624ebcbf44e804dd39950" category="inline-image-macro">下キャレット</block>
+  <block id="d69c8f5affd800d0b387db4764fa4a30" category="list-text">詳細を確認するクラスタの場合は、をクリックします <block ref="3cc4b517e471a9470762ff8efb27bddb" category="inline-image-macro-rx" type="image"></block> をクリックしてクラスタ情報を展開します。</block>
+  <block id="18f84cf96ce5861e5585468ef883b180" category="inline-image-macro">クラスタのライセンス情報を表示するためにクラスタを拡張したスクリーンショット。</block>
+  <block id="5796086a716a7059f711cc33be934605" category="paragraph"><block ref="5796086a716a7059f711cc33be934605" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="521890c2a62a1a85cbecc2bafda74ce4" category="section-title">Cloud Manager からオンプレミスクラスタを検出する</block>
+  <block id="37a6c50787e86807fb86ba567bcdf0ee" category="paragraph">Cloud Manager 内のオンプレミス ONTAP クラスタは、 _Digital Wallet _ 、 _Discovery_service 、または _Canvas_ から検出できます。検出されたクラスタは、 Cloud Manager の作業環境として使用できるようになります。これにより、クラスタを管理できます。</block>
+  <block id="c9ecc8a69079ef340936f1093bfada6d" category="section-title">クラスタをデジタルウォレットから検出します</block>
+  <block id="908ef7c718a69fa183e13e4c8b3ab47d" category="paragraph">ONTAP クラスタをデジタルウォレットから検出し、作業環境として追加できます。</block>
+  <block id="36d55ec313e00378aaaf5ec3b1bcff58" category="list-text">* デジタルウォレット * で、 * オンプレミス ONTAP * タブをクリックします。</block>
+  <block id="8d2ff04d10c442ed57703018babe9f96" category="inline-image-macro">NSS アカウントで検出されたすべてのクラスタを示すオンプレミスの ONTAP ページのスクリーンショット。</block>
+  <block id="5f5cb0a23f869bcd760424b63ca7ccbe" category="paragraph"><block ref="5f5cb0a23f869bcd760424b63ca7ccbe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3b9a7f6da25384dd51d6dbd5ba88f195" category="list-text">Cloud Manager で管理するクラスタの * Discover * をクリックします。</block>
+  <block id="f024b01de8a49fd78376b5b34e191e05" category="list-text">Discover ONTAP Cluster_page で、 admin ユーザアカウントのパスワードを入力し、 * Discover * をクリックします。</block>
+  <block id="8de100c0dba6b3831c0b2881ceb2cda0" category="inline-image-macro">ONTAP のクラスタ詳細ページの例を示すスクリーンショット：クラスタ管理 IP アドレス、ユーザ名、パスワード</block>
+  <block id="357d0c6bce7e8c970eebbf9c77a986a3" category="paragraph"><block ref="357d0c6bce7e8c970eebbf9c77a986a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3c3c9057924029bd556e6edcfa649159" category="paragraph">クラスタ管理 IP アドレスは、デジタルウォレットの情報に基づいて入力されます。</block>
+  <block id="fc45e850f400ce201ca92baeb830649a" category="paragraph">クラスタのステータスが、オンプレミスの ONTAP ページで * Discovered * に変わります。</block>
+  <block id="851ba55b7a9669c2b53281675a9400d7" category="paragraph">Cloud Manager はクラスタを検出し、作業環境名としてクラスタ名を使用してキャンバスの作業環境に追加します。</block>
+  <block id="487e5c142c79949705e4fec4bdaf1798" category="inline-image-macro">キャンバス内のオンプレミス ONTAP クラスタのスクリーンショット。</block>
+  <block id="55b907f18f62b7afccbe773678898915" category="paragraph"><block ref="55b907f18f62b7afccbe773678898915" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5001076d3540a9fadfaa9abbcd7c0a33" category="paragraph">右側のパネルでこのクラスタのサービスを有効にして、クラスタとの間でデータをレプリケートしたり、クラウドへのデータ階層化を設定したり、ボリュームをクラウドにバックアップしたり、ボリュームでコンプライアンススキャンを実行したりできます。新しいボリュームを作成したり、 System Manager を起動して高度なタスクを実行することもできます。</block>
+  <block id="7362a812b6851f7a017007fc87c33502" category="section-title">検出ページからクラスタを検出しています</block>
+  <block id="e69ab6e4fe1f42bbc031b0b99f02cc32" category="paragraph">検出ページで ONTAP クラスタを検出し、作業環境として追加できます。</block>
+  <block id="b6ba0959daf6c2e88778283aca0e636c" category="list-text">[* 検出 *] ページで、 [* クラスタインベントリ *] タブをクリックします。</block>
+  <block id="53c88078c2a5d382925e8aedc1edc203" category="inline-image-macro">NSS アカウントで検出されたすべてのクラスタを示す検出ページのスクリーンショット。</block>
+  <block id="c3b5cdb9acfd996c5114037523a62d4e" category="paragraph"><block ref="c3b5cdb9acfd996c5114037523a62d4e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="13b9e6e3af52ca38ce11c3fd268b0306" category="list-text">_Choose a Location_page * On-Premises ONTAP * が事前に選択されているので、 * Continue * をクリックします。</block>
+  <block id="663909252cbf804332d40198bd07c3e1" category="list-text">ONTAP クラスタの詳細ページで、管理者ユーザアカウントのパスワードを入力し、 * 追加 * をクリックします。</block>
+  <block id="a84799eaf08f86932722efc82243f9c5" category="paragraph"><block ref="a84799eaf08f86932722efc82243f9c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b23f4f3576f9bd475fb30812d2b23d55" category="paragraph">クラスタ管理 IP アドレスは、 Active IQ の情報に基づいて設定されます。</block>
+  <block id="dd7d25d7e52a6b920a44c09b9d6001c2" category="list-text">[_Details &amp; Credentials_] ページで、クラスタ名が Working Environment Name として追加されるので、 [* Go] をクリックします。</block>
+  <block id="1093fa2422906ba065f8a75ad66f4a5e" category="section-title">Canvas ページからクラスタを検出しています</block>
+  <block id="2db26f8570c8b8acf20a1bfbc80fd8d7" category="paragraph">ONTAP クラスタを検出し、カンバスページから作業環境として追加できます。これらの手順は、クラスタが現在サポート契約を結んでいないために、 [Digital Wallet （デジタルウォレット） ] ページまたは [Discovery （検出） ] ページに表示されない場合に使用できます。</block>
+  <block id="97707ad60b3e5459995b6db6d5086ef2" category="list-text">キャンバスページで、 * 作業環境の追加 * をクリックし、 * オンプレミス ONTAP * を選択します。</block>
+  <block id="2f799a76b51c894f217a81de4e75abc1" category="list-text">プロンプトが表示されたら、コネクタを作成します。</block>
+  <block id="937fa9b8cdf644357e79a543061b3118" category="paragraph">詳細については、上記のリンクを参照してください。</block>
+  <block id="669e31e2ded4144ba1ab8e5d140217fa" category="list-text">ONTAP クラスタの詳細ページで、クラスタ管理 IP アドレスと admin ユーザアカウントのパスワードを入力し、 * 追加をクリックします。</block>
+  <block id="67fe55a3364c0f403605fc5a0962dd79" category="list-text">[_Details &amp; Credentials_] ページで、作業環境の名前と概要を入力し、 [* Go*] をクリックします。</block>
+  <block id="9b1f59bbde82cfc6467a99c2530b6993" category="paragraph">Cloud Manager によってクラスタが検出され、キャンバスの作業環境に追加されます。</block>
+  <block id="1e54529331fefb19128d41707045a526" category="summary">オンプレミスの ONTAP クラスタの新機能をご確認ください。</block>
+  <block id="25203f9c21dc384a4870095f19f67811" category="doc">オンプレミス ONTAP クラスタの新機能</block>
+  <block id="f1c93420db258097a199364a47f6389a" category="section-title">2022 年 2 月 27 日</block>
+  <block id="f25694bb9bc00e8fcfcc1a3c65dd482b" category="section-title">「社内 ONTAP 」タブはデジタルウォレットで使用できます。</block>
+  <block id="d3f07c4c7baf0c60bc64c1cdc48732af" category="paragraph">オンプレミスの ONTAP クラスタのインベントリと、ハードウェアおよびサービス契約の有効期限を確認できるようになりました。クラスタに関するその他の詳細も確認できます。</block>
+  <block id="184ca21b83c54a7ba12f9b1077ccb494" category="inline-link-macro">この重要なオンプレミスクラスタの情報を表示する方法を参照してください</block>
+  <block id="2e75bdb3e0110a2699bbf1604ed481b5" category="paragraph"><block ref="c8b8a178761036798ad62f0cd5ecaa34" category="inline-link-macro-rx"></block>。クラスタ用のネットアップサポートサイトのアカウント（ NSS ）が必要です。また、 NSS のクレデンシャルを Cloud Manager アカウントに接続する必要があります。</block>
+  <block id="323b3f6bd6f8fad6e54ac5e1413cf3dc" category="section-title">2022 年 1 月 11 日</block>
+  <block id="d69df284f21ccdf93082c4aaf0953b6d" category="section-title">オンプレミスの ONTAP クラスタのボリュームに追加するタグは、 Tagging サービスで使用できます。</block>
+  <block id="3686b84bef4027bfe5a11fcf472d8662" category="paragraph">ボリュームに追加するタグは、アプリケーションテンプレートサービスのタグ機能に関連付けられます。これにより、リソースの管理を整理して簡単にすることができます。</block>
+  <block id="e7c5ad171298e38494ee7665c2b581e3" category="section-title">2021 年 11 月 28 日</block>
+  <block id="feea05ef76a2f6f2d444dfab436c31c4" category="section-title">オンプレミスの ONTAP クラスタ向けのボリューム作成ウィザードが簡易化されました</block>
+  <block id="decff6be18712c90db61aad628609885" category="paragraph">使いやすいようにボリューム作成ウィザードが再設計され、カスタムのエクスポートポリシーを選択できるようになりました。</block>
+  <block id="1758589feb07955b2d0a7b0b09d739c8" category="section-title">2021 年 3 月 8 日</block>
+  <block id="4741d0181532f824e500e5fb61f113de" category="section-title">Active IQ サービスで利用できるオンプレミスの ONTAP クラスタ情報</block>
+  <block id="4daa302553b3da312bae6dd7eb61185b" category="inline-link-macro">クラスタを検出</block>
+  <block id="a0f0c23d7902a428b74d69d482ddd35f" category="list-text">Active IQ が（ NSS アカウントに基づいて）オンプレミスクラスタのリストを表示したら、ボタンをクリックしてに切り替えることができます <block ref="6092f07e6002a33280f60ad47718209e" category="inline-link-macro-rx"></block> Cloud Manager キャンバスに追加します。これにより、すべてのストレージシステムを Cloud Manager で簡単に管理できるようになります。</block>
+  <block id="9daa178990889b96486cdf1ec49a312b" category="inline-link-macro">Ansible プレイブックをダウンロードし、クラスタファームウェアをアップグレードします</block>
+  <block id="17a4a2fa852d95e14e95882197efc7aa" category="list-text">1 つ以上のクラスタでファームウェアの更新が必要であると Active IQ が判断したら、ボタンをクリックして、を選択します <block ref="16afe937cb21a9e778b58814919b3a40" category="inline-link-macro-rx"></block>。</block>
+  <block id="6ab419e28cab05bd181b5548828ce291" category="inline-link-macro">クラウド対応ワークロードタブ</block>
+  <block id="1ebb52f6b09efabdd77b2a2848b85455" category="list-text">新しい <block ref="6662d2379ae546ce8e2cb9fe679f2897" category="inline-link-macro-rx"></block> オンプレミスの ONTAP クラスタからクラウドに移行するのに最適と特定したワークロードまたはボリュームのリストが表示されます。これらのボリュームの一部を移動すると、コストが削減され、パフォーマンスと耐障害性が向上する可能性があります。</block>
+  <block id="9e49141228614f46674f3e99aa052d48" category="inline-link-macro">リフトとシフトとは何ですか？</block>
+  <block id="40e7938989b9c693ef9d2535a73efc96" category="paragraph">を参照してください <block ref="e6e341fabb88ca4be499965211728d47" category="inline-link-macro-rx"></block></block>
+  <block id="a79252770e38858e803b78ebe70f476c" category="summary">Cloud Manager の検出ページには、オンプレミス環境で検出されていない ONTAP クラスタが表示されます。いずれのクラスタでもディスクファームウェアまたはシェルフファームウェアを更新する必要があるかどうかや、オンプレミスシステムの購入時に付与されたすべての Cloud Volumes ONTAP ライセンスを使用しているかどうかが示されます。この情報は、 Active IQ デジタルアドバイザから Cloud Manager に提供されます。</block>
+  <block id="201d4e253581704f3c9075d20de0800d" category="doc">Active IQ データを使用して ONTAP クラスタを管理する</block>
+  <block id="dab2edf9eaac3950e92c281ce358af01" category="inline-link-macro">Active IQ デジタルアドバイザ</block>
+  <block id="514b6ec137f734ec761c475906287d33" category="paragraph">Cloud Manager の検出ページには、オンプレミス環境で検出されていない ONTAP クラスタが表示されます。いずれのクラスタでもディスクファームウェアまたはシェルフファームウェアを更新する必要があるかどうかや、オンプレミスシステムの購入時に付与されたすべての Cloud Volumes ONTAP ライセンスを使用しているかどうかが示されます。この情報は、から Cloud Manager に提供されます <block ref="96b0c35d37b4e23868c2e41d5824676c" category="inline-link-macro-rx"></block>。</block>
+  <block id="877e966493986f18eebcf46b7d6d67c2" category="section-title">未使用の Cloud Volumes ONTAP ノードベースのライセンスを表示する</block>
+  <block id="e051d909dcdfaf8dde6aa313e7e514fb" category="paragraph">購入したオンプレミス ONTAP ストレージシステムパッケージの多くには、 Cloud Volumes ONTAP のノードベースの無償ライセンスが含まれているため、 Cloud Manager でネットアップのクラウドストレージ製品を試用できます。ライセンスを使用して新しい Cloud Volumes ONTAP インスタンスを作成するか、または既存の Cloud Volumes ONTAP インスタンスにライセンスを適用して、容量を 368 TiB 拡張できます。</block>
+  <block id="28b5c704efe77fa99914c5d15b834356" category="paragraph">ネットアップサポートサイトのクレデンシャルに基づいて、未使用の Cloud Volumes ONTAP ライセンスがあるかどうかを確認することができます。</block>
+  <block id="a43ee6f922a7c62ff05b101954d934b2" category="admonition">ノードベースライセンスの用語は、ライセンスの発行後 1 カ月目から始まります。たとえば、 2021 年 12 月 15 日にノードベースの BYOL ライセンスを取得すると、ライセンス期間は 2022 年 1 月 1 日（翌月の最初の日）から始まります。</block>
+  <block id="bb6db3272f61df9d142245bad134431b" category="list-text">Cloud Manager で、 * Discovery * タブをクリックします。</block>
+  <block id="cfc865340f0f02a4dd08f62e2e8fe125" category="list-text">ページの下部にある [*Licenses*] タブをクリックします。</block>
+  <block id="639b1d7fb8e43ed30e50b381c3c4aa34" category="inline-image-macro">使用済みおよび未使用の Cloud Volumes ONTAP ライセンスのスクリーンショット。</block>
+  <block id="a2c8a9de7c0c7fa33897f8350d1b5c22" category="paragraph"><block ref="a2c8a9de7c0c7fa33897f8350d1b5c22" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e0100df5af797921fc79adf1b8eaad21" category="paragraph">使用されていないライセンスごとに * ライセンスを使用 * ボタンが表示されます。</block>
+  <block id="e8f6ae75b342427a9d51c95e9abc390e" category="list-text">ライセンスをアクティブ化して使用を開始する場合は、 * ライセンスを使用 * をクリックします。</block>
+  <block id="5287c83ddc3dc50aaff735cfe18a95da" category="inline-image-macro">2 つのライセンス使用オプションのスクリーンショット。</block>
+  <block id="3d94be1c5586728c800c45af3978b6d1" category="paragraph"><block ref="3d94be1c5586728c800c45af3978b6d1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d838eea6d6aef3f385a5f70f924f4064" category="paragraph">使用可能なライセンスを使用するためのオプションについては、次のタスクを参照してください。</block>
+  <block id="9010a59dbd1bb55c1d09325b086cf95a" category="section-title">未使用の Cloud Volumes ONTAP ライセンスを使用している</block>
+  <block id="9df8192c2e5c4ad9ecb7165618fee709" category="paragraph">未使用のライセンスを使用して新しい Cloud Volumes ONTAP インスタンスを作成したり、既存の Cloud Volumes ONTAP インスタンスにライセンスの容量を拡張したりできます。ライセンスの容量は 368 TiB です。</block>
+  <block id="bc866d16cf14596fb689a7be19bd9b62" category="paragraph">_expires_column は、ライセンスが最後にアクティブになった日を示します。新しい Cloud Volumes ONTAP システムを作成すると、ライセンスの有効期限が切れます。既存の Cloud Volumes ONTAP システムを更新する場合は、既存のライセンスが拡張される期間を指定します。</block>
+  <block id="c01362d3449463ab4de39a406ef94e81" category="paragraph">_License Type_'_Hyperscaler_'_Model Type_columns は ' その Cloud Volumes ONTAP ライセンスのタイプを表しますたとえば、 * BYOL | Single | Azure * は、「 Microsoft Azure 」に導入された「シングルノード」 Cloud Volumes ONTAP システムのライセンスを「お客様所有」のライセンスとして使用できることを意味します。この列に表示される値を表に示します。</block>
+  <block id="1976d7f704de389d9fe064e08ea35b2d" category="cell">列（ Column ）</block>
+  <block id="c82a6100dace2b41087ba6cf99a5976a" category="cell">値</block>
+  <block id="cdff8be4ca736db9b0823a504eda7e80" category="cell">ライセンスタイプ</block>
+  <block id="ca75617283c17509ed536915221a8bcd" category="cell">従量課金制</block>
+  <block id="c1b47471a575ac0bf20392ca17ecd880" category="cell">ハイパースケーラ</block>
+  <block id="57361d3b4b4360545b0c23a47073a41f" category="cell">Azure AWS GCP すべてのプロバイダ</block>
+  <block id="e2716f400d704606cc5d4c0987e7ad76" category="cell">モデルタイプ（ Model Type ）</block>
+  <block id="1ac2cd329c86309526504526d4255f5d" category="cell">単一 HA</block>
+  <block id="4955f544d812d37952a286831508aad2" category="paragraph">_new_Cloud Volumes ONTAP システムを作成する場合は、導入するシステムのタイプを指定します。たとえば、サンプルライセンス（ * BYOL | Single | Azure * ）を使用すると、 Azure で最大 368 TiB の使用権を持つシングルノード Cloud Volumes ONTAP システムを作成できます。このライセンスは、 HA システムの作成や AWS へのインスタンスの導入には使用できません。</block>
+  <block id="0dd047bef2bdbbe37da283a248bb038f" category="paragraph">既存の Cloud Volumes ONTAP システムを更新する場合は、既存のライセンスの拡張に対応できるシステムのタイプを示します。サンプルライセンスを再度使用して、 Azure 内の任意のシングルノード Cloud Volumes ONTAP システムのライセンスを拡張できます。このライセンスは、 HA システムまたは AWS に導入されているインスタンスのライセンスの拡張には使用できません。</block>
+  <block id="8317d8b26726204f53143b343d30cd86" category="section-title">未使用の新しい Cloud Volumes ONTAP システムを作成します 使用許諾</block>
+  <block id="316ed297194a01f1ecb2157f422311a3" category="paragraph">未使用のライセンスで新しい Cloud Volumes ONTAP インスタンスを作成する手順は、次のとおりです。</block>
+  <block id="4137ed06a6eedeb10215c62f13cf6a4f" category="list-text">[ ライセンスの使用 ] をクリックし、 [ 新しい Cloud Volumes ONTAP * にライセンスを使用 ] を選択します。</block>
+  <block id="f0e305a2a1a498a40953222c6422fa17" category="list-text">[ ライセンスの使用 ...] ページで、ライセンス情報を確認し、 [ ライセンスの使用 ] をクリックします。</block>
+  <block id="cb64511523e262038bbadb5f570d0f00" category="paragraph">ほとんどの場合、クラウドプロバイダとノード数の両方がライセンスで定義されているため、 Cloud Volumes ONTAP システムの作業環境を作成するための * 詳細とクレデンシャル * ページが表示されます。</block>
+  <block id="bdfda9514b4405352b99463199c4abce" category="paragraph">「すべてのプロバイダ」として定義されているライセンスを使用している場合は、「場所を選択」 * ページが表示されます。そのため、最初にクラウドプロバイダを選択してから、「 * 詳細とクレデンシャル * 」ページに進むことができます。</block>
+  <block id="eb188ed1b50312a411c4193636276963" category="list-text">手順に従って、作業環境と最初のボリュームを作成します。</block>
+  <block id="a91c3ba620bed9543e87449350fcf5f8" category="paragraph">Cloud Volumes ONTAP システムを導入するクラウドプロバイダに応じて、次のセクションを参照してください。</block>
+  <block id="7ca1af679f0ba86814f2ad58a578cb7c" category="inline-link">Azure で Cloud Volumes ONTAP を起動します</block>
+  <block id="0be0836bc69799b792b188dfc8c7fe7e" category="list-text"><block ref="0be0836bc69799b792b188dfc8c7fe7e" category="inline-link-rx"></block></block>
+  <block id="6602afb860a6cca23c3b75bf601365eb" category="inline-link">AWS での Cloud Volumes ONTAP の起動</block>
+  <block id="3e33b81f05bb640dee79c5aa4e351c91" category="list-text"><block ref="3e33b81f05bb640dee79c5aa4e351c91" category="inline-link-rx"></block></block>
+  <block id="fdbc311c4dd4bb425160f22f166435fa" category="inline-link">GCP での Cloud Volumes ONTAP の起動</block>
+  <block id="cd47b7c8c0d2761b197e744505044dd0" category="list-text"><block ref="cd47b7c8c0d2761b197e744505044dd0" category="inline-link-rx"></block></block>
+  <block id="fc1b08dc940b99d55538c59350836c4e" category="section-title">既存の Cloud Volumes ONTAP のライセンス容量を拡張する システム</block>
+  <block id="018b9186b94c6dbbc76c0f561953e8fe" category="paragraph">現在導入されている Cloud Volumes ONTAP システムが、いずれかの空きライセンス（同じクラウドプロバイダ、ノード数など）のライセンス要件に一致する場合は、次の手順に従ってライセンスの容量を 368 TiB 拡張できます。</block>
+  <block id="b363019bfe1ca02220f0c0febfd0d7d3" category="list-text">[ ライセンスの使用 ] をクリックし、 [ 既存の Cloud Volumes ONTAP にライセンスを追加 ] を選択します。</block>
+  <block id="8d2b2ad68e66c2954477a0042c18491b" category="inline-image-macro">既存の Cloud Volumes ONTAP システムにライセンスを追加するためのライセンスの追加ダイアログのスクリーンショット。</block>
+  <block id="a16e3557d85b779de3481b9d463231a3" category="paragraph"><block ref="a16e3557d85b779de3481b9d463231a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f63e565e78fbc3941f4aeb818d9adc7" category="list-text">[ ライセンスの追加 ...] ページで、ライセンスを拡張する Cloud Volumes ONTAP システムを選択し、 [ ライセンスの追加 ] をクリックします。</block>
+  <block id="01101cf6491f283bbc511b2204660e07" category="paragraph">確認ダイアログが表示されます。</block>
+  <block id="943eaf8e2fe7a686c34b7ea7d07b7e5f" category="inline-image-macro">ライセンスが Cloud Volumes ONTAP システムに追加されたことを示すスクリーンショット。</block>
+  <block id="0920bd8a3d301421a85410319fdd1857" category="paragraph"><block ref="0920bd8a3d301421a85410319fdd1857" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d5190a36a662e84cf8de5c09d44f6dfa" category="list-text">[* 閉じる ] をクリックすると、ウィンドウを閉じて [ 検出 ] ページに戻ることができます。または、リンクをクリックして Cloud Volumes ONTAP ライセンスページに移動し、そのシステムのライセンスの詳細を表示することもできます。</block>
+  <block id="c7cde2cc5531750bd7afb257a7416f69" category="section-title">新しいディスクおよびシェルフファームウェアをダウンロードしています</block>
+  <block id="c1f8c4f481fea12447e6335187bccea1" category="paragraph">検出された ONTAP クラスタのいずれかで、シェルフまたはディスクのファームウェアを更新する必要があるかどうかを確認できます。また、 Ansible プレイブックをダウンロードしてファームウェアをアップグレードできます。</block>
+  <block id="ece4bd8c93cef708b8850f01d015cbc1" category="paragraph">* 注： * 新しいファームウェアを表示およびダウンロードできるのは、特定のサポートプランに登録している場合のみです。</block>
+  <block id="5dc9524b4cd7d7218b8b70e20d81aee9" category="list-text">[Discovery] （検出）ページで、 [* Firmware Updates] （ファームウェアアップデート）タブをクリックします。</block>
+  <block id="e821b7bf1b046d731db61151ffef074f" category="inline-image-macro">ファームウェアの更新が必要なノードを示す検出ページのスクリーンショット。</block>
+  <block id="88bdb0042cbe86520f536789a86aeb48" category="paragraph"><block ref="88bdb0042cbe86520f536789a86aeb48" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cbdce8b07b7c380c846236fee37c7836" category="paragraph">新しいファームウェアを必要とするクラスタがある場合は、「すべてをダウンロード」ボタンが表示されます。</block>
+  <block id="8d6d3d96c09b58400db6a0a90b4f4b2e" category="list-text">[ すべてダウンロード ] をクリックし、 zip ファイルを保存します。</block>
+  <block id="2b089b0727b24846b4d2b3849b27af3f" category="inline-link-macro">ストレージシステムのファームウェアを更新します</block>
+  <block id="cc7bf767406c46d6dec3789baeeeef16" category="list-text">zip ファイルを解凍し、次の手順を参照してください <block ref="21157034c7cb15af080552bd727bf9bb" category="inline-link-macro-rx"></block>。</block>
+  <block id="5296842aa0336682a51237a868549568" category="paragraph">ファームウェアが更新されました。ONTAP システムから次回 Active IQ に AutoSupport メッセージが送信されると、 _Firmware Updates_ ページのステータスが更新され、更新が不要であることが示されます。</block>
+  <block id="ff1c95e8f3fad8c7515a303da09fad1e" category="section-title">クラウドの候補となるオンプレミスのワークロードを表示します</block>
+  <block id="517bf15cf54a7936b9d15152071a6b5f" category="paragraph">特定のワークロードやボリュームを、オンプレミスの ONTAP クラスタから Cloud Volumes ONTAP システムに移行するのに最適です。このようなメリットには、コストの削減、パフォーマンスと耐障害性の向上などがあります。_ クラウド対応ワークロード _ タブには、検出された ONTAP クラスタからのこれらのワークロードのリストが表示されます。</block>
+  <block id="4daab9a749a609edfa8ab73aa0d34893" category="inline-image-macro">クラウドに移動可能なオンプレミスクラスタのワークロードを示すスクリーンショット。</block>
+  <block id="c36e9cf75b6ce98dc93b30298ed56dc4" category="paragraph"><block ref="c36e9cf75b6ce98dc93b30298ed56dc4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8a142176543aec4571af8742cf8d54b8" category="paragraph">このページでは、 SAP 、 SAP HANA 、 Oracle 、ファイル共有、 SharePoint などのサポート対象ワークロードを参照できます。</block>
+  <block id="0c4ef3dd5858986fd8e07047ff6608cf" category="inline-link-macro">持ち上げてシフトします</block>
+  <block id="97df77063884378a1c2d764fdec7597a" category="paragraph">_ 移行と切り替え _ は、アプリケーションをクラウドに移行するためのアプローチです。つまり、アプリケーションとそれに関連するデータを、アプリケーションの設計を変更することなくクラウドプラットフォームに移動することを意味します。詳細については、を参照してください <block ref="5ace72c4dc027f4fe1a0278eeb38322e" category="inline-link-macro-rx"></block>。</block>
+  <block id="1586c6707e7935aaf588bf6b29222f4d" category="summary">Cloud Manager からオンプレミスの ONTAP クラスタを検出したら、作業環境を開いてストレージをプロビジョニングおよび管理できます。</block>
+  <block id="b310817751b4e8272bdb5072c505baef" category="doc">オンプレミスの ONTAP クラスタのストレージを管理する</block>
+  <block id="38eaccec7e82003efc63778895a9ac9d" category="section-title">ボリュームの作成</block>
+  <block id="2cb8480b538d668110f1483b21b959f3" category="paragraph">Cloud Manager では、既存のアグリゲートに NFS または CIFS ボリュームを作成できます。オンプレミスの ONTAP クラスタに、 Cloud Manager から新しいアグリゲートを作成することはできません。</block>
+  <block id="efc4120a3fbfbea33245fb931c324492" category="inline-xref">以下の手順を実行します</block>
+  <block id="ba9dee2f877a286e797bf6a3232b07bb" category="paragraph">「テンプレート」と呼ばれる Cloud Manager の機能を使用すると、データベースやストリーミングサービスなど、特定のアプリケーションのワークロード要件に最適化されたボリュームを作成できます。組織で使用するボリュームテンプレートが作成されている場合は、次の手順を実行します <block ref="e476f8430392eaa6984ef9c1426bdf73" category="inline-xref-macro-rx"></block>。</block>
+  <block id="7c1c859794874e74db7044dd733c5ca7" category="list-text">キャンバスページで、ボリュームをプロビジョニングするオンプレミス ONTAP クラスタの名前をダブルクリックします。</block>
+  <block id="e0e02b01eefffa92ef6dd41ca0bfddaa" category="list-text">[ 新しいボリュームの追加 ] をクリックします。</block>
+  <block id="108a74a6cbb575c986177039e07dc411" category="list-text">ウィザードの手順に従って、ボリュームを作成します。</block>
+  <block id="3c4fc22bba56c8a041aad60e63c7450f" category="list-text">* 詳細と保護 * ：ボリュームに関する基本的な詳細を入力し、 Snapshot ポリシーを選択します。</block>
+  <block id="3b0e375a08fe94a129cba31916c9d2dc" category="paragraph">このページのフィールドの一部は分かりやすいもので、説明を必要としません。以下は、説明が必要なフィールドのリストです。</block>
+  <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">フィールド</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">説明</block>
+  <block id="6f6cb72d544962fa333e2e34ce64f719" category="cell">サイズ</block>
+  <block id="7b975bd58356ec64d88f70d7f167a299" category="cell">入力できる最大サイズは、シンプロビジョニングを有効にするかどうかによって大きく異なります。シンプロビジョニングを有効にすると、現在使用可能な物理ストレージよりも大きいボリュームを作成できます。</block>
+  <block id="426fb47479d0477ed5dbc9388b9add76" category="cell">スナップショットポリシー</block>
+  <block id="052c4d27b63fed6776d46336a295d801" category="cell">Snapshot コピーポリシーは、自動的に作成される NetApp Snapshot コピーの頻度と数を指定します。NetApp Snapshot コピーは、パフォーマンスに影響を与えず、ストレージを最小限に抑えるポイントインタイムファイルシステムイメージです。デフォルトポリシーを選択することも、なしを選択することもできます。一時データには、 Microsoft SQL Server の tempdb など、 none を選択することもできます。</block>
+  <block id="5090bb88c9aa49ab33053342a61490ca" category="list-text">* プロトコル * ：ボリューム（ NFS または CIFS ）のプロトコルを選択し、ボリュームのアクセス制御または権限を設定します。</block>
+  <block id="32532e671368d9ba8ec11ef9121e8520" category="paragraph">CIFS を選択した場合、サーバがまだセットアップされていないと、 Cloud Manager は Active Directory またはワークグループを使用して CIFS サーバをセットアップするよう求めます。</block>
+  <block id="10ca883ec839df9958683234c16faa0c" category="paragraph">以下は、説明が必要なフィールドのリストです。</block>
+  <block id="8aaaedc342a0dce1d73d33f3fb69a2af" category="cell">Access Control の略</block>
+  <block id="bc1f478a23842406dc7a171758b075ab" category="cell">NFS エクスポートポリシーは、ボリュームにアクセスできるサブネット内のクライアントを定義します。デフォルトでは、 Cloud Manager はサブネット内のすべてのインスタンスへのアクセスを提供する値を入力します。</block>
+  <block id="4f365bcd27fae641194545a5a823e30f" category="cell">権限およびユーザー / グループ</block>
+  <block id="5cd4beaa083f2301775c1a1bc84f2afc" category="cell">これらのフィールドを使用すると、ユーザとグループ（アクセス制御リストまたは ACL とも呼ばれる）の SMB 共有へのアクセスのレベルを制御できます。ローカルまたはドメインの Windows ユーザまたはグループ、 UNIX ユーザまたはグループを指定できます。ドメインの Windows ユーザ名を指定する場合は、 domain\username 形式でユーザのドメインを指定する必要があります。</block>
+  <block id="63c4ac4a1d6cda8f9ce366cee0962eb7" category="list-text">* 使用プロファイル * ：ボリュームで Storage Efficiency 機能を有効にするか無効にするかを選択します。</block>
+  <block id="1fd2dba2020c106a2c49da0e6ad7e868" category="paragraph">ONTAP には、必要なストレージの合計容量を削減できるストレージ効率化機能がいくつか搭載されています。NetApp Storage Efficiency 機能には、次のようなメリットがあります。</block>
+  <block id="6cd880eabbec3488232c6cba3fbcf998" category="list-text">シンプロビジョニング</block>
+  <block id="e0a869114b17393f8a2fea22f17329ae" category="list-text">物理ストレージプールよりも多くの論理ストレージをホストまたはユーザに提供します。ストレージスペースは、事前にストレージスペースを割り当てる代わりに、データの書き込み時に各ボリュームに動的に割り当てられます。</block>
+  <block id="83f45cad5e6f535ff10e564a526baad0" category="list-text">重複排除</block>
+  <block id="9baaeec0cd7e25ec2d4277d7befe94c7" category="list-text">同一のデータブロックを検索し、単一の共有ブロックへの参照に置き換えることで、効率を向上します。この手法では、同じボリュームに存在するデータの冗長ブロックを排除することで、ストレージ容量の要件を軽減します。</block>
+  <block id="82af841589057aa8922b1ac3bb4a28a4" category="list-text">圧縮</block>
+  <block id="f5061de48feb872d5a805e7385702973" category="list-text">プライマリ、セカンダリ、アーカイブストレージ上のボリューム内のデータを圧縮することで、データの格納に必要な物理容量を削減します。</block>
+  <block id="eb5c6869b3fc04254530622723507f79" category="list-text">* レビュー * ：ボリュームの詳細を確認して、 * 追加 * をクリックします。</block>
+  <block id="721171135447663f810b8610ea482f5a" category="section-title">テンプレートからボリュームを作成する</block>
+  <block id="afe466f073b1387a5eab0283552b7517" category="paragraph">特定のアプリケーションのワークロード要件に最適化されたボリュームを導入できるように、社内の ONTAP ボリュームテンプレートを作成している場合は、このセクションの手順に従います。</block>
+  <block id="7ae492186bd46e832a6b64cff9b1575a" category="paragraph">テンプレートを使用すると、ディスクタイプ、サイズ、プロトコル、スナップショットポリシーなど、特定のボリュームパラメータがテンプレートにすでに定義されているため、ジョブが簡単になります。パラメータがすでに事前定義されている場合は、次のボリュームパラメータに進みます。</block>
+  <block id="395f4870d887a81edabc6ad40f5a84f0" category="admonition">テンプレートを使用する場合にのみ、 NFS ボリュームまたは CIFS ボリュームを作成できます。</block>
+  <block id="ec8d6cd563b6f9acbaf5d348267aeb5c" category="list-text">キャンバスページで、ボリュームをプロビジョニングするオンプレミス ONTAP システムの名前をクリックします。</block>
+  <block id="5bc96ba8ddc4433dd0df94e6350c496e" category="list-text">をクリックします <block ref="a5c9b85c9e509567688aed8106bc419c" category="inline-image-macro-rx" type="image"></block> &gt; * テンプレートからボリュームを追加 * 。</block>
+  <block id="74099e7b70c30e3a55db543cda9bfc1e" category="inline-image-macro">テンプレートから新しいボリュームを追加する方法を示すスクリーンショット。</block>
+  <block id="f5cfbd56be4d95a78f70efb70e2e9079" category="paragraph"><block ref="f5cfbd56be4d95a78f70efb70e2e9079" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5b33742921c3a09b3c0916cff2d87632" category="list-text">_ テンプレートの選択 _ ページで、ボリュームの作成に使用するテンプレートを選択し、 * 次へ * をクリックします。</block>
+  <block id="41fdbb8293e553892079d0e7ad8a9ad9" category="inline-image-macro">使用可能なアプリケーションテンプレートのスクリーンショット。</block>
+  <block id="cfb983acad90faeddd99d211d0d05e99" category="paragraph"><block ref="cfb983acad90faeddd99d211d0d05e99" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8675916eaff2fb10955e8a3b1b14108f" category="paragraph">_Define Parameters_ ページが表示されます。</block>
+  <block id="19f5b7f92268b2f8e63e4083819666c9" category="inline-image-macro">ボリュームを作成するために入力する必要がある空のテンプレートを示すスクリーンショット。</block>
+  <block id="19c51733b2ad780abc1dd51dfb4774d0" category="paragraph"><block ref="19c51733b2ad780abc1dd51dfb4774d0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="31f425aaa6a26f3fc5e635704753602f" category="paragraph">* 注： * 読み取り専用パラメータを表示 * チェックボックスをオンにすると、テンプレートによってロックされているすべてのフィールドを表示できます（これらのパラメータの値を表示する場合）。デフォルトでは、これらの事前定義フィールドは非表示になっており、入力する必要のあるフィールドのみが表示されます。</block>
+  <block id="44e06c3ed2de64bcd539ac10a3a31173" category="list-text">_Context_area では、作業環境に、で開始した作業環境の名前が入力されます。ボリュームを作成する Storage VM * とアグリゲート * を選択する必要があります。</block>
+  <block id="b4798c3f6907cfb67d2e44f900cd8761" category="inline-xref">ボリュームの作成</block>
+  <block id="d6fbed7ed4f7f24d5424eed00308902b" category="list-text">テンプレートからハードコーディングされていないすべてのパラメータに値を追加します。を参照してください <block ref="0987d6f2734ae944e1736c1f24a760ec" category="inline-xref-macro-rx"></block> オンプレミスの ONTAP ボリュームを導入するために実行する必要があるすべてのパラメータの詳細については、を参照してください。</block>
+  <block id="2bc51d1d472e80f2611fe5ff280c4ebe" category="list-text">このボリュームに必要なすべてのパラメータを定義したら、 * テンプレートの実行 * をクリックします。</block>
+  <block id="b185109168e53693f7b6943d7df66166" category="paragraph">Cloud Manager によってボリュームがプロビジョニングされ、進捗状況を確認できるページが表示されます。</block>
+  <block id="40136e65ff57723941fc2af2bf21d54a" category="inline-image-macro">テンプレートから新しいボリュームを作成する進行状況を示すスクリーンショット。</block>
+  <block id="1d2547b9bcbb0f13f704545fd4b3b7b0" category="paragraph"><block ref="1d2547b9bcbb0f13f704545fd4b3b7b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3fcf4599fd910141dcd628a7411238d5" category="paragraph">その後、新しいボリュームが作業環境に追加されます。</block>
+  <block id="0ca2ea4d1ed88de2980b88af718eedaf" category="paragraph">また、テンプレートにセカンダリ操作が実装されている場合は、たとえばボリュームで Cloud Backup を有効にすると、その操作も実行されます。</block>
+  <block id="1e57268fd975664444ddbda428e56bf7" category="paragraph">CIFS 共有をプロビジョニングした場合は、ファイルとフォルダに対する権限をユーザまたはグループに付与し、それらのユーザが共有にアクセスしてファイルを作成できることを確認します。</block>
+  <block id="9471c2e49e82f1450164e486a41810fd" category="section-title">データのレプリケート</block>
+  <block id="d67fa48b66fcc0b221394da39a91b7bd" category="paragraph">Cloud Volumes ONTAP システムと ONTAP クラスタ間でデータをレプリケートするには、ワンタイムデータレプリケーションを選択します。これにより、クラウドとの間でデータを移動したり、定期的にスケジュールを作成したりすることができ、ディザスタリカバリや長期保存に役立ちます。</block>
+  <block id="4bfd6df89ae3683de5e81c0d2d601355" category="inline-link">詳細については、ここをクリックしてください</block>
+  <block id="a8a96c36866372f961b611932778c533" category="paragraph"><block ref="740522bad1dae5d9c555be7717efd2a7" category="inline-link-rx"></block>。</block>
+  <block id="69d7d8f5eb94524f8d67bd4810ecd3b4" category="section-title">データをバックアップしています</block>
+  <block id="4dafc83aff4c0c428f00d14ba637d08e" category="paragraph">Cloud Backup を使用して、オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージにデータをバックアップできます。このサービスは、オンプレミスとクラウドのデータを保護し、長期アーカイブするためのバックアップとリストアの機能を提供します。</block>
+  <block id="bfdc46d4c7e2c86b2f36ab608613b0a1" category="paragraph"><block ref="92bb2af477ec46204a7fbf4ac8f25c07" category="inline-link-rx"></block>。</block>
+  <block id="b62196e30035e69996a2d1d3a9d64116" category="section-title">データをスキャン、マッピング、および分類します</block>
+  <block id="8c5469d13e648a63a3b3954844a606d5" category="paragraph">Cloud Data Sense は、社内のオンプレミスクラスタをスキャンして、データをマッピングして分類し、プライベート情報を特定します。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ移行プロジェクトを支援できます。</block>
+  <block id="3a5ae3c8370ec0420f4d5f09975f9473" category="paragraph"><block ref="4ac871f2acbfe21994d476b705580307" category="inline-link-rx"></block>。</block>
+  <block id="8eb970559649a4b00ff570ac7b611b1a" category="section-title">データをクラウドに階層化する</block>
+  <block id="74f0cc3c17958e80b4ccd076c9e50493" category="paragraph">クラウド階層化を使用して、アクセス頻度の低いデータを ONTAP クラスタからオブジェクトストレージに自動的に階層化することで、データセンターをクラウドに拡張します。</block>
+  <block id="06ed7fc16cefcce74b94962584869b39" category="paragraph"><block ref="240bb627dd9982017efa6d3b711a39ad" category="inline-link-rx"></block>。</block>
+  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">ネットアップでは、 Cloud Manager をさまざまな方法でサポートしています。ナレッジベース（ KB ）記事やコミュニティフォーラムなど、 24 時間 365 日利用可能な幅広いセルフサポートオプションをご用意しています。サポート登録には、 Web チケット処理によるリモートテクニカルサポートが含まれます。</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">ヘルプを表示します</block>
+  <block id="7ccaf84febc0ed633fbdbadb8d488a7e" category="paragraph"><block ref="7ccaf84febc0ed633fbdbadb8d488a7e" category="inline-link-macro-rx"></block></block>
+  <block id="b151b3ad7000d170a09f91975e26bf45" category="summary">オンプレミスの ONTAP システムに対して高度な管理を実行する必要がある場合は、 ONTAP システムマネージャまたはコマンドラインインターフェイスを使用できます。</block>
+  <block id="6d0824d1c808525b64d6b584ae3a8175" category="doc">オンプレミスの ONTAP システムに接続</block>
+  <block id="bd6791b739d936827d0be68a00c193da" category="section-title">System Manager に接続します</block>
+  <block id="e9981bacbcd5ea480a3cacf7d804b6cc" category="paragraph">一部のオンプレミス ONTAP タスクを、クラスタ上で実行されるブラウザベースの管理ツールである System Manager から実行しなければならない場合があります。</block>
+  <block id="ec94e3c72dd4a57a61fc48219f606995" category="paragraph">Cloud Manager にアクセスするコンピュータに、オンプレミスの ONTAP システムへのネットワーク接続が必要です。たとえば、オンプレミスネットワークにあるジャンプホストから Cloud Manager へのログインが必要になることがあります。</block>
+  <block id="b942f0c9a0122357a68d35d76ab18fff" category="list-text">キャンバスページで、 System Manager で管理するオンプレミス ONTAP システムをダブルクリックします。</block>
+  <block id="cb4fcd5786332ca0e73ec9ae0b1d43e7" category="list-text">メニューアイコンをクリックし、 * System Manager * をクリックします。</block>
+  <block id="3eab8ee0f45fd9624973c05ec4303d5a" category="list-text">[* 起動 * ] をクリックします。</block>
+  <block id="7587c6609566a034156659b2141e3de1" category="paragraph">System Manager が新しいブラウザタブにロードされます。</block>
+  <block id="84a670db3237cb6e7874ef079ba39fe4" category="list-text">ログイン画面で、クラスタの作成時に指定した管理者ユーザのユーザ名とパスワードを入力し、 * サインイン * をクリックします。</block>
+  <block id="304e0c9f87006647e7b7cb69233dbe66" category="paragraph">System Manager コンソールがロードされます。これで、オンプレミスの ONTAP システムの管理に使用できるようになります。</block>
+  <block id="31c2c11de9569969822fd820af45d8ac" category="section-title">ONTAP CLI に接続します</block>
+  <block id="4e107e465b3e776fcb07ca6e5f56265f" category="paragraph">ONTAP の CLI では、すべての管理コマンドを実行できます。高度なタスクを実行する場合や、 CLI を使い慣れている場合は、 CLI の使用を推奨します。Secure Shell （ SSH ）を使用して CLI に接続できます。</block>
+  <block id="e6ad06bd1420173d20b58a9a17dd8153" category="paragraph">SSH を使用してオンプレミスの ONTAP システムに接続するホストに、オンプレミスの ONTAP システムへのネットワーク接続が必要です。たとえば、オンプレミスネットワーク内のジャンプホストから SSH を使用する場合などです。</block>
+  <block id="6ad94be4e63b3d4783fdd1f854b7bbdf" category="list-text">Cloud Manager で、クラスタ管理インターフェイスの IP アドレスを特定します。</block>
+  <block id="4820059dd9647a62e3d49d6805dc17ef" category="list-text">キャンバスページで、オンプレミスの ONTAP システムを選択します。</block>
+  <block id="23c2e641ffa866a42c848c9f2c90ecd1" category="list-text">をクリックします <block ref="a74720392297d66ac1ab9a90296912c9" category="inline-image-macro-rx" type="image"></block> 右側のペインで、クラスタ管理 IP アドレスをコピーします。</block>
+  <block id="58cab5452c4b6c92c8dd75e357433c83" category="list-text">SSH を使用して、 admin アカウントを使用してクラスタ管理インターフェイスの IP アドレスに接続します。</block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 例 *</block>
+  <block id="ed9663bc6832f99d5a7f57ceca04eed7" category="paragraph">次の図は、 PuTTY を使用した例を示しています。</block>
+  <block id="a9981641e36e0e304ba5071a1d3b4273" category="inline-image-macro">ポート 22 の宛先 admin@192.168.11 のスクリーンショット。</block>
+  <block id="7a9bcdad1d59400ff7c688cda722d3e6" category="paragraph"><block ref="7a9bcdad1d59400ff7c688cda722d3e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2180cb7bd670dcd385a7b5e609212943" category="list-text">ログインプロンプトで、 admin アカウントのパスワードを入力します。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
+  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
+  <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
+  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9 に関する注意事項</block>
+  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
+  <block id="45ddc58d1297027037d3c08b53916d6d" category="summary">Active IQ デジタルアドバイザは、 ONTAP クラスタの運用、セキュリティ、パフォーマンスを 1 つの画面で最適化できるように、 Cloud Manager UI に統合されています。</block>
+  <block id="1f1125562764d9d74a4d3f4bc7cc2a80" category="doc">Active IQ デジタルアドバイザを使用してクラスタを最適化します</block>
+  <block id="8a55e23dfc2cee9948b7f2cff318419d" category="paragraph"><block ref="83bf54f0a7542b03c8754003363eabd9" category="inline-link-rx"></block> Cloud Manager の UI に統合されているため、 ONTAP クラスタの処理、セキュリティ、パフォーマンスを一元的に最適化できます。</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">の機能</block>
+  <block id="60f840b3ee58d04f9e443013fa9e3b28" category="paragraph">Active IQ デジタルアドバイザを使用して、ストレージシステムの全体的なステータス、システムの健全性に関する概要情報、インベントリ、計画、アップグレード、および監視リストレベルの価値ある分析情報を確認できます。</block>
+  <block id="cd5d4df84a7902a777304de9ff13e8a8" category="list-text">ストレージシステムの健常性を分析し、最適化できます</block>
+  <block id="9d4e486fd4968dd03a1921222e688c12" category="list-text">ストレージシステムのすべてのリスクと、リスクを軽減するための対処方法に関する分析情報を取得できます</block>
+  <block id="4c8438807538fa50db0d24cda516c562" category="list-text">を表示して、ストレージデバイスのパフォーマンスを分析します パフォーマンスデータのグラフ形式</block>
+  <block id="63a792f0efaeee81d9e7f3ba251637c2" category="list-text">容量の 90% を超えたシステムまたはを超えたシステムに関する詳細を確認できます 容量の使用率が 90% に近づいています</block>
+  <block id="25bab72d979d2f781310fbd8a7510d1e" category="list-text">期限切れのハードウェアおよびソフトウェアに関する情報を取得します または、今後 6 か月以内に期限切れに近いものとします</block>
+  <block id="c0b44a835cfaa8886063c96fb9342411" category="list-text">ストレージシステムソフトウェアをアップグレードし、 Ansible で ONTAP ファームウェアを更新します</block>
+  <block id="696fbf3ecd0e89c737f9c5b7adddfb8e" category="section-title">サポート対象の ONTAP システム</block>
+  <block id="4b094536c4cca99df693f08aaf755f4d" category="paragraph">Cloud Volumes ONTAP デジタルアドバイザは、 NSS アカウント内のすべてのオンプレミス ONTAP システムと Active IQ システムに関する情報を提供します。</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">コスト</block>
+  <block id="f534e70d23b20b69790b5281217a7257" category="paragraph">Cloud Manager でこのサービスを使用するコストは発生しません。</block>
+  <block id="292e5c26d5c03cc4f8e1e8768bbbabaa" category="section-title">Active IQ Digital Advisor と Cloud Manager の連携</block>
+  <block id="d7c60574b4f0b4da904aa4b90c236328" category="paragraph">Active IQ Digital Advisor のユーザインターフェイスは、 Cloud Manager に完全に統合されています。</block>
+  <block id="6c393be0430be4cea1a82e8ea44630ed" category="paragraph">Cloud Manager で、 * Active IQ * サービスをクリックします。</block>
+  <block id="ec6a6fa8382cb9301ba7488319f6fb15" category="list-text">Cloud Manager に既存の NSS アカウントをすでに登録している場合は、スタンドアロンの実装で参照してくださいのように、 Active IQ デジタルアドバイザ UI が表示されます<block ref="a550a333ee33d06042f0abf049084bb9" category="inline-link-rx"></block>。</block>
+  <block id="8965da9bda23fc5879f1275b96def7e5" category="inline-image-macro">Cloud Manager の Active IQ デジタルアドバイザユーザインターフェイスのスクリーンショット。</block>
+  <block id="38f4032535fda9a726d153b903098e68" category="paragraph"><block ref="38f4032535fda9a726d153b903098e68" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7524f7a154d0b13a1e895c56c832c376" category="inline-link">NSS アカウントを今すぐ登録してください</block>
+  <block id="42216d007027bec4fe072e64e93bdc65" category="list-text">Cloud Manager に NSS アカウントを登録していない場合は、<block ref="bc2c9d3f2e75cd48cb0b55d3477b90f9" category="inline-link-rx"></block> 次に、 Active IQ デジタルアドバイザ UI が表示されます。</block>
+  <block id="48c7c08bdc82dde24c342aee125d0f2f" category="inline-link">詳細については、この FAQ を参照してください</block>
+  <block id="3fd1583fc67e0323cda8c48d28e7a1b0" category="admonition">2021 年 12 月 3 日時点で、ネットアップは NSS アカウントのクレデンシャルの登録方法を新たに変更しました。<block ref="cb97e5fbd5823896c819a7579da8b62c" category="inline-link-rx"></block>。NSS アカウントで古いクレデンシャルのセットを使用している場合は、新しいクレデンシャルに更新する必要があります。</block>
+  <block id="0a20c90d5270bed19fcaf851778c663b" category="section-title">次の手順</block>
+  <block id="8aec6a2bcfb78af1fffa4f2c52dfe49d" category="inline-link">Active IQ デジタルアドバイザのドキュメント</block>
+  <block id="21f0ca98c05681847062cb25ecc8fb48" category="paragraph">を参照してください<block ref="2abfe6afa62505308fadab43da217548" category="inline-link-rx"></block> を参照してください。</block>
+  <block id="def39ca4f33907811340e246db3f16d2" category="summary">Cloud Manager を使用して NetApp AFF システムと FAS システムを管理し、ストレージのプロビジョニング、データのレプリケート、重要なクラウドベースデータサービスの設定を行います。</block>
+  <block id="2631cea4d4184b173c4d7b153d959556" category="doc">オンプレミスの ONTAP クラスタに関するドキュメント</block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">Cloud Manager のすべてのドキュメント</block>
+  <block id="9a30b78b07a6b42c9e4998f9c5d5640f" category="sidebar">オンプレミスの ONTAP クラスタのドキュメント</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">リリースノート</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">はじめに</block>
+  <block id="a1ebf612d281c8e7fb16bbfa253b9627" category="sidebar">ONTAP クラスタを検出</block>
+  <block id="019323681c39b462d0fd30312fc741c2" category="sidebar">オンプレミスの ONTAP クラスタを管理</block>
+  <block id="8ad62e3eb63519f91a079cc6e3b60ae4" category="sidebar">オンプレミスの ONTAP ボリュームを管理</block>
+  <block id="b23da3dd5cacf822f40ae17bb33e9245" category="sidebar">Active IQ Digital Advisor を使用してクラスタを最適化します</block>
+  <block id="0edf67a4be59f702b9420db43194ad29" category="sidebar">Active IQ データを使用してクラスタを管理します</block>
+  <block id="81563192c68b08feebdcc9a64a5e510b" category="sidebar">オンプレミスクラスタに接続</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
+  <block id="72d4138d424c03eaee16ca8b76b4263d" category="sidebar">検出されたオンプレミスクラスタと検出されていないオンプレミスクラスタを表示</block>
+  <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="sidebar">新機能</block>
+  <block id="1c27e11c5e65b93611e6f5ce640f8184" category="sidebar">ボリュームを作成します</block>
+  <block id="ef8e14c9c12dfb15fa021d5c96021bb8" category="sidebar">新しいディスクファームウェアとシェルフファームウェアをダウンロードします</block>
+  <block id="daefd0b150727ca9436d0c950172fd71" category="sidebar">System Manager と CLI を使用して、オンプレミスの ONTAP システムを管理します</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">ブログコミュニティ</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">ネットアップコミュニティ</block>
+  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central のブログです</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
+</blocks>

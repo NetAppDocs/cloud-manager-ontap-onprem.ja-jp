@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: concept-aiq-digital-advisor.html 
+keywords: concepts, active iq digital advisor, ontap 
+summary: Active IQ デジタルアドバイザは、 ONTAP クラスタの運用、セキュリティ、パフォーマンスを 1 つの画面で最適化できるように、 Cloud Manager UI に統合されています。 
+---
+= Active IQ デジタルアドバイザを使用してクラスタを最適化します
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+https://www.netapp.com/services/support/active-iq/["Active IQ デジタルアドバイザ"^] Cloud Manager の UI に統合されているため、 ONTAP クラスタの処理、セキュリティ、パフォーマンスを一元的に最適化できます。
+
+
+
+== の機能
+
+Active IQ デジタルアドバイザを使用して、ストレージシステムの全体的なステータス、システムの健全性に関する概要情報、インベントリ、計画、アップグレード、および監視リストレベルの価値ある分析情報を確認できます。
+
+* ストレージシステムの健常性を分析し、最適化できます
+* ストレージシステムのすべてのリスクと、リスクを軽減するための対処方法に関する分析情報を取得できます
+* を表示して、ストレージデバイスのパフォーマンスを分析します パフォーマンスデータのグラフ形式
+* 容量の 90% を超えたシステムまたはを超えたシステムに関する詳細を確認できます 容量の使用率が 90% に近づいています
+* 期限切れのハードウェアおよびソフトウェアに関する情報を取得します または、今後 6 か月以内に期限切れに近いものとします
+* ストレージシステムソフトウェアをアップグレードし、 Ansible で ONTAP ファームウェアを更新します
+
+
+
+
+== サポート対象の ONTAP システム
+
+Cloud Volumes ONTAP デジタルアドバイザは、 NSS アカウント内のすべてのオンプレミス ONTAP システムと Active IQ システムに関する情報を提供します。
+
+
+
+== コスト
+
+Cloud Manager でこのサービスを使用するコストは発生しません。
+
+
+
+== Active IQ Digital Advisor と Cloud Manager の連携
+
+Active IQ Digital Advisor のユーザインターフェイスは、 Cloud Manager に完全に統合されています。
+
+Cloud Manager で、 * Active IQ * サービスをクリックします。
+
+* Cloud Manager に既存の NSS アカウントをすでに登録している場合は、スタンドアロンの実装で参照してくださいのように、 Active IQ デジタルアドバイザ UI が表示されます https://activeiq.netapp.com/[]。
++
+image:screenshot_aiq_digital_advisor.png["Cloud Manager の Active IQ デジタルアドバイザユーザインターフェイスのスクリーンショット。"]
+
+* Cloud Manager に NSS アカウントを登録していない場合は、 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html["NSS アカウントを今すぐ登録してください"^] 次に、 Active IQ デジタルアドバイザ UI が表示されます。
+
+
+
+NOTE: 2021 年 12 月 3 日時点で、ネットアップは NSS アカウントのクレデンシャルの登録方法を新たに変更しました。 https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/FAQs_for_NetApp_adoption_of_MS_Azure_AD_B2C_for_login["詳細については、この FAQ を参照してください"^]。NSS アカウントで古いクレデンシャルのセットを使用している場合は、新しいクレデンシャルに更新する必要があります。
+
+
+
+== 次の手順
+
+を参照してください https://docs.netapp.com/us-en/active-iq/index.html["Active IQ デジタルアドバイザのドキュメント"^] を参照してください。
