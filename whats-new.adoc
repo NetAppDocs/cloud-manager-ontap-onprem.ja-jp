@@ -25,7 +25,7 @@ summary: オンプレミスの ONTAP クラスタの新機能をご確認くだ�
 
 オンプレミスの ONTAP クラスタのインベントリと、ハードウェアおよびサービス契約の有効期限を確認できるようになりました。クラスタに関するその他の詳細も確認できます。
 
-link:task-discovering-ontap.html#viewing-cluster-information-and-contract-details["この重要なオンプレミスクラスタの情報を表示する方法を参照してください"]。クラスタ用のネットアップサポートサイトのアカウント（ NSS ）が必要です。また、 NSS のクレデンシャルを Cloud Manager アカウントに接続する必要があります。
+https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html#viewing-cluster-information-and-contract-details["この重要なオンプレミスクラスタの情報を表示する方法を参照してください"]。クラスタ用のネットアップサポートサイトのアカウント（ NSS ）が必要です。また、 NSS のクレデンシャルを Cloud Manager アカウントに接続する必要があります。
 
 
 

@@ -96,18 +96,13 @@
   <block id="9b1f59bbde82cfc6467a99c2530b6993" category="paragraph">Cloud Manager によってクラスタが検出され、キャンバスの作業環境に追加されます。</block>
   <block id="1e54529331fefb19128d41707045a526" category="summary">オンプレミスの ONTAP クラスタの新機能をご確認ください。</block>
   <block id="25203f9c21dc384a4870095f19f67811" category="doc">オンプレミス ONTAP クラスタの新機能</block>
-  <block id="f1c93420db258097a199364a47f6389a" category="section-title">2022 年 2 月 27 日</block>
   <block id="f25694bb9bc00e8fcfcc1a3c65dd482b" category="section-title">「社内 ONTAP 」タブはデジタルウォレットで使用できます。</block>
   <block id="d3f07c4c7baf0c60bc64c1cdc48732af" category="paragraph">オンプレミスの ONTAP クラスタのインベントリと、ハードウェアおよびサービス契約の有効期限を確認できるようになりました。クラスタに関するその他の詳細も確認できます。</block>
   <block id="184ca21b83c54a7ba12f9b1077ccb494" category="inline-link-macro">この重要なオンプレミスクラスタの情報を表示する方法を参照してください</block>
-  <block id="2e75bdb3e0110a2699bbf1604ed481b5" category="paragraph"><block ref="c8b8a178761036798ad62f0cd5ecaa34" category="inline-link-macro-rx"></block>。クラスタ用のネットアップサポートサイトのアカウント（ NSS ）が必要です。また、 NSS のクレデンシャルを Cloud Manager アカウントに接続する必要があります。</block>
-  <block id="323b3f6bd6f8fad6e54ac5e1413cf3dc" category="section-title">2022 年 1 月 11 日</block>
   <block id="d69df284f21ccdf93082c4aaf0953b6d" category="section-title">オンプレミスの ONTAP クラスタのボリュームに追加するタグは、 Tagging サービスで使用できます。</block>
   <block id="3686b84bef4027bfe5a11fcf472d8662" category="paragraph">ボリュームに追加するタグは、アプリケーションテンプレートサービスのタグ機能に関連付けられます。これにより、リソースの管理を整理して簡単にすることができます。</block>
-  <block id="e7c5ad171298e38494ee7665c2b581e3" category="section-title">2021 年 11 月 28 日</block>
   <block id="feea05ef76a2f6f2d444dfab436c31c4" category="section-title">オンプレミスの ONTAP クラスタ向けのボリューム作成ウィザードが簡易化されました</block>
   <block id="decff6be18712c90db61aad628609885" category="paragraph">使いやすいようにボリューム作成ウィザードが再設計され、カスタムのエクスポートポリシーを選択できるようになりました。</block>
-  <block id="1758589feb07955b2d0a7b0b09d739c8" category="section-title">2021 年 3 月 8 日</block>
   <block id="4741d0181532f824e500e5fb61f113de" category="section-title">Active IQ サービスで利用できるオンプレミスの ONTAP クラスタ情報</block>
   <block id="4daa302553b3da312bae6dd7eb61185b" category="inline-link-macro">クラスタを検出</block>
   <block id="a0f0c23d7902a428b74d69d482ddd35f" category="list-text">Active IQ が（ NSS アカウントに基づいて）オンプレミスクラスタのリストを表示したら、ボタンをクリックしてに切り替えることができます <block ref="6092f07e6002a33280f60ad47718209e" category="inline-link-macro-rx"></block> Cloud Manager キャンバスに追加します。これにより、すべてのストレージシステムを Cloud Manager で簡単に管理できるようになります。</block>
@@ -316,7 +311,6 @@
   <block id="7524f7a154d0b13a1e895c56c832c376" category="inline-link">NSS アカウントを今すぐ登録してください</block>
   <block id="42216d007027bec4fe072e64e93bdc65" category="list-text">Cloud Manager に NSS アカウントを登録していない場合は、<block ref="bc2c9d3f2e75cd48cb0b55d3477b90f9" category="inline-link-rx"></block> 次に、 Active IQ デジタルアドバイザ UI が表示されます。</block>
   <block id="48c7c08bdc82dde24c342aee125d0f2f" category="inline-link">詳細については、この FAQ を参照してください</block>
-  <block id="3fd1583fc67e0323cda8c48d28e7a1b0" category="admonition">2021 年 12 月 3 日時点で、ネットアップは NSS アカウントのクレデンシャルの登録方法を新たに変更しました。<block ref="cb97e5fbd5823896c819a7579da8b62c" category="inline-link-rx"></block>。NSS アカウントで古いクレデンシャルのセットを使用している場合は、新しいクレデンシャルに更新する必要があります。</block>
   <block id="0a20c90d5270bed19fcaf851778c663b" category="section-title">次の手順</block>
   <block id="8aec6a2bcfb78af1fffa4f2c52dfe49d" category="inline-link">Active IQ デジタルアドバイザのドキュメント</block>
   <block id="21f0ca98c05681847062cb25ecc8fb48" category="paragraph">を参照してください<block ref="2abfe6afa62505308fadab43da217548" category="inline-link-rx"></block> を参照してください。</block>
@@ -342,4 +336,10 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">ネットアップコミュニティ</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central のブログです</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
+  <block id="ba26e4556a0f160834687982b0479336" category="section-title">2022 年 2 月 27 日</block>
+  <block id="a70e816a0245e4c041fe696bc068fde8" category="paragraph"><block ref="cdf49294fa22fe97f3cd9774fbb3d925" category="inline-link-rx"></block>。クラスタ用のネットアップサポートサイトのアカウント（ NSS ）が必要です。また、 NSS のクレデンシャルを Cloud Manager アカウントに接続する必要があります。</block>
+  <block id="ef1bf4095b622ba80ac24b48b8e45eac" category="section-title">2022 年 1 月 11 日</block>
+  <block id="f61163b681442ac500a8018c87241770" category="section-title">2021 年 11 月 28 日</block>
+  <block id="dbbd746e2d2c019dcb0c3c40b74f4f75" category="section-title">2021 年 3 月 8 日</block>
+  <block id="748a389f24166595a5373d446b323287" category="admonition">2021 年 12 月時点で、ネットアップは NSS アカウントのクレデンシャルの登録方法を新たに変更しました。<block ref="cb97e5fbd5823896c819a7579da8b62c" category="inline-link-rx"></block>。NSS アカウントで古いクレデンシャルのセットを使用している場合は、新しいクレデンシャルに更新する必要があります。</block>
 </blocks>

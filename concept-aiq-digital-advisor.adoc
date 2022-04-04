@@ -57,7 +57,7 @@ image:screenshot_aiq_digital_advisor.png["Cloud Manager の Active IQ デジタ�
 
 
 
-NOTE: 2021 年 12 月 3 日時点で、ネットアップは NSS アカウントのクレデンシャルの登録方法を新たに変更しました。 https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/FAQs_for_NetApp_adoption_of_MS_Azure_AD_B2C_for_login["詳細については、この FAQ を参照してください"^]。NSS アカウントで古いクレデンシャルのセットを使用している場合は、新しいクレデンシャルに更新する必要があります。
+NOTE: 2021 年 12 月時点で、ネットアップは NSS アカウントのクレデンシャルの登録方法を新たに変更しました。 https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/FAQs_for_NetApp_adoption_of_MS_Azure_AD_B2C_for_login["詳細については、この FAQ を参照してください"^]。NSS アカウントで古いクレデンシャルのセットを使用している場合は、新しいクレデンシャルに更新する必要があります。
 
 
 
