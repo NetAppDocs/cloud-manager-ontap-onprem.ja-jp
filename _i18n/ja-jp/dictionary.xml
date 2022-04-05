@@ -49,7 +49,6 @@
   <block id="04c986062f9c3ab6ca9967dac4c5be0d" category="paragraph"><block ref="04c986062f9c3ab6ca9967dac4c5be0d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b0ae438dbb700ffcab0b452edad46174" category="paragraph">有効なサポート契約がある ONTAP クラスタが、 Cloud Manager で検出されたかどうかを示すステータスで表示されます。</block>
   <block id="b5e4244593ae3713ba9c349b71c06182" category="inline-link-macro">Active IQ デジタルアドバイザからサポート契約を更新してください</block>
-  <block id="f58334fc97f74b0f9a5bd0fcab804d79" category="admonition">サポート契約が期限切れになると、システムは検出ページから削除されます。ただし、これらのシステムは引き続きそれぞれの作業環境で管理できます。方法を参照してください <block ref="73ab273e50affbed0eaeebe6bee46665" category="inline-link-macro-rx"></block>。</block>
   <block id="7f50c223930d4a02cade2b9c75256f8f" category="section-title">クラスタ情報と契約の詳細の表示</block>
   <block id="e6dfd5017eebf97461338fa01b9cb076" category="paragraph">_Digital Wallet _ を使用して、クラスタの詳細、およびハードウェアとソフトウェアの契約ステータスを表示できます。</block>
   <block id="7d8cc3d1d840829a8cdda42ed1f06341" category="list-text">* デジタルウォレット * で、 * オンプレミス ONTAP * タブをクリックします。</block>
@@ -342,4 +341,5 @@
   <block id="f61163b681442ac500a8018c87241770" category="section-title">2021 年 11 月 28 日</block>
   <block id="dbbd746e2d2c019dcb0c3c40b74f4f75" category="section-title">2021 年 3 月 8 日</block>
   <block id="748a389f24166595a5373d446b323287" category="admonition">2021 年 12 月時点で、ネットアップは NSS アカウントのクレデンシャルの登録方法を新たに変更しました。<block ref="cb97e5fbd5823896c819a7579da8b62c" category="inline-link-rx"></block>。NSS アカウントで古いクレデンシャルのセットを使用している場合は、新しいクレデンシャルに更新する必要があります。</block>
+  <block id="52d7343109a7ba661f3e64dd9602ee49" category="admonition">サポート契約が期限切れになると、システムは検出ページから削除されます。ただし、これらのシステムは引き続きそれぞれの作業環境で管理できます。方法を参照してください <block ref="d9b78242359ad37ab7655d26c02f42fb" category="inline-link-macro-rx"></block>。</block>
 </blocks>

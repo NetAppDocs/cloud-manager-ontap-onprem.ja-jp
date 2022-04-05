@@ -84,7 +84,7 @@ image:screenshot_aiq_main_page.png["オンプレミスの ONTAP クラスタの�
 
 
 
-NOTE: サポート契約が期限切れになると、システムは検出ページから削除されます。ただし、これらのシステムは引き続きそれぞれの作業環境で管理できます。方法を参照してください link:https://docs.netapp.com/us-en/active-iq/task-renew-support-contracts-for-your-systems.html["Active IQ デジタルアドバイザからサポート契約を更新してください"^]。
+NOTE: サポート契約が期限切れになると、システムは検出ページから削除されます。ただし、これらのシステムは引き続きそれぞれの作業環境で管理できます。方法を参照してください link:https://docs.netapp.com/us-en/active-iq/task_renew_support_contracts_for_your_systems.html["Active IQ デジタルアドバイザからサポート契約を更新してください"^]。
 
 
 
