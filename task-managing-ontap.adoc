@@ -6,6 +6,7 @@ summary: Cloud Manager の検出ページには、オンプレミス環境で検
 ---
 = Active IQ データを使用して ONTAP クラスタを管理する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Active IQ デジタルアドバイザは、 ONTAP クラスタの運用
 ---
 = Active IQ デジタルアドバイザを使用してクラスタを最適化します
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

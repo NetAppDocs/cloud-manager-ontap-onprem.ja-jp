@@ -6,6 +6,7 @@ summary: オンプレミスの ONTAP 作業環境を Cloud Manager から管理�
 ---
 = オンプレミスの ONTAP 作業環境を削除
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
