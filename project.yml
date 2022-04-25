@@ -28,8 +28,6 @@ sidebar:
       url: "/concept-aiq-digital-advisor.html"
     - title: Active IQ データを使用してクラスタを管理します
       url: "/task-managing-ontap.html"
-    - title: オンプレミスクラスタに接続
-      url: "/task-connect-to-onprem.html"
     - title: オンプレミスの ONTAP 作業環境を削除
       url: "/task-remove-on-prem.html"
   - title: 知識とサポート
@@ -56,8 +54,6 @@ homepage:
       url: task-provisioning-ontap.html
     - title: 新しいディスクファームウェアとシェルフファームウェアをダウンロードします
       url: task-managing-ontap.html#downloading-new-disk-and-shelf-firmware
-    - title: System Manager と CLI を使用して、オンプレミスの ONTAP システムを管理します
-      url: task-connect-to-onprem.html
   - title: ブログコミュニティ
     links:
     - title: ネットアップコミュニティ
