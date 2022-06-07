@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head class="at-element-marker">
-  <title>Active IQ データを使用して ONTAP クラスタを管理する | NetApp Documentation</title>
+  <title>拡張ビューを使用してONTAP を管理します | NetApp Documentation</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Active IQ データを使用して ONTAP クラスタを管理する | NetApp Documentation" />
+  <meta property="og:title" content="拡張ビューを使用してONTAP を管理します | NetApp Documentation" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/task-managing-ontap.html" />
-	<meta property="og:description" content="Cloud Manager の検出ページには、オンプレミス環境で検出されていない ONTAP クラスタが表示されます。いずれのクラスタでもディスクファームウェアまたはシェルフファームウェアを更新する必要があるかどうかや、オンプレミスシステムの購入時に付与されたすべての Cloud Volumes ONTAP ライ..." />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/task-administer-advanced-view.html" />
+	<meta property="og:description" content="オンプレミスのONTAP クラスタに対して高度な管理を実行する必要がある場合は、ONTAP システムに付属の管理インターフェイスであるONTAP System Managerを使用できます。高度な管理のためにCloud Managerを終了する必要がないように、Cloud ManagerのインターフェイスはClo..." />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Cloud Manager の検出ページには、オンプレミス環境で検出されていない ONTAP クラスタが表示されます。いずれのクラスタでもディスクファームウェアまたはシェルフファームウェアを更新する必要があるかどうかや、オンプレミスシステムの購入時に付与されたすべての Cloud Volumes ONTAP ライ...">
-  <meta name="keywords" content=" ontap, cluster, manage, fas, aff, active iq, shelf firmware, disk firmware, CVO licenses"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="オンプレミスのONTAP クラスタに対して高度な管理を実行する必要がある場合は、ONTAP システムに付属の管理インターフェイスであるONTAP System Managerを使用できます。高度な管理のためにCloud Managerを終了する必要がないように、Cloud ManagerのインターフェイスはClo...">
+  <meta name="keywords" content=" system manager, advanced view, access system manager, load system manager, use system manager"><!-- Icons -->
   <link rel="icon" href="/ja-jp/cloud-manager-ontap-onprem/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/ja-jp/cloud-manager-ontap-onprem/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-ontap-onprem/issues/new?body=Page%3A%20[Active IQ データを使用して ONTAP クラスタを管理する](https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/task-managing-ontap.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/cloud-manager-ontap-onprem/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-ontap-onprem/blob/main/task-managing-ontap.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/cloud-manager-ontap-onprem/images/edit-sm.svg" class="github-icon" />GitHub で編集</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/cloud-manager-ontap-onprem/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-ontap-onprem/issues/new?body=Page%3A%20[拡張ビューを使用してONTAP を管理します](https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/task-administer-advanced-view.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/cloud-manager-ontap-onprem/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-ontap-onprem/blob/main/task-administer-system-manager.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/cloud-manager-ontap-onprem/images/edit-sm.svg" class="github-icon" />GitHub で編集</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/cloud-manager-ontap-onprem/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">このページ</div>
@@ -288,15 +288,15 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/task-managing-ontap.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/task-administer-advanced-view.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-managing-ontap.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-administer-advanced-view.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/cloud-manager-ontap-onprem/task-managing-ontap.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-ontap-onprem/task-administer-advanced-view.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/cloud-manager-ontap-onprem/task-managing-ontap.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-ontap-onprem/task-administer-advanced-view.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/cloud-manager-ontap-onprem/task-managing-ontap.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-ontap-onprem/task-administer-advanced-view.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -401,12 +401,8 @@
           
 
 
-
-
-
-
     <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ja-jp/cloud-manager-ontap-onprem/pdfs/pages/task-managing-ontap.pdf" >
+  <a target="_blank" href="/ja-jp/cloud-manager-ontap-onprem/pdfs/pages/task-administer-advanced-view.pdf" >
     <img src="/ja-jp/cloud-manager-ontap-onprem/images/pdf.png" width="16" height="16"/>
     PDF of this page
   </a>
@@ -414,6 +410,10 @@
 
 </ul>
   
+
+
+
+
 
 
 
@@ -511,11 +511,11 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-ontap-onprem/task-provisioning-ontap.html">
         オンプレミスの ONTAP ボリュームを管理
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-ontap-onprem/task-administer-advanced-view.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-ontap-onprem/task-administer-advanced-view.html">
         System Managerを使用して管理
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-ontap-onprem/concept-aiq-digital-advisor.html">
         Active IQ Digital Advisor を使用してクラスタを最適化します
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-ontap-onprem/task-managing-ontap.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-ontap-onprem/task-managing-ontap.html">
         Active IQ データを使用してクラスタを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-ontap-onprem/task-remove-on-prem.html">
         オンプレミスの ONTAP 作業環境を削除
@@ -590,14 +590,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Active IQ データを使用して ONTAP クラスタを管理する</h1>
+  <h1 class="n-doc__component-detail-heading">拡張ビューを使用してONTAP を管理します</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 07:45:04 +0000">04/18/2022</time>
+    <time datetime="2022-06-07 13:58:49 +0000">06/07/2022</time>
     
   
 
@@ -606,229 +606,155 @@
 
 <div id="preamble">
 <div class="sectionbody">
+<div class="paragraph lead">
+<p>オンプレミスのONTAP クラスタに対して高度な管理を実行する必要がある場合は、ONTAP システムに付属の管理インターフェイスであるONTAP System Managerを使用できます。高度な管理のためにCloud Managerを終了する必要がないように、Cloud ManagerのインターフェイスはCloud Managerに直接組み込まれています。</p>
+</div>
 <div class="paragraph">
-<p>Cloud Manager の検出ページには、オンプレミス環境で検出されていない ONTAP クラスタが表示されます。いずれのクラスタでもディスクファームウェアまたはシェルフファームウェアを更新する必要があるかどうかや、オンプレミスシステムの購入時に付与されたすべての Cloud Volumes ONTAP ライセンスを使用しているかどうかが示されます。この情報は、から Cloud Manager に提供されます <a href="https://docs.netapp.com/us-en/active-iq/index.html" target="_blank" rel="noopener">"Active IQ デジタルアドバイザ"</a>。</p>
+<p>この拡張ビューはプレビューとして使用できます。今後のリリースでは、この点をさらに改良し、機能を強化する予定です。製品内のチャットでご意見をお寄せください。</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="未使用の-cloud-volumes-ontap-ノードベースのライセンスを表示する">未使用の Cloud Volumes ONTAP ノードベースのライセンスを表示する</h2>
+<h2 id="の機能">の機能</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>購入したオンプレミス ONTAP ストレージシステムパッケージの多くには、 Cloud Volumes ONTAP のノードベースの無償ライセンスが含まれているため、 Cloud Manager でネットアップのクラウドストレージ製品を試用できます。ライセンスを使用して新しい Cloud Volumes ONTAP インスタンスを作成するか、または既存の Cloud Volumes ONTAP インスタンスにライセンスを適用して、容量を 368 TiB 拡張できます。</p>
-</div>
-<div class="paragraph">
-<p>ネットアップサポートサイトのクレデンシャルに基づいて、未使用の Cloud Volumes ONTAP ライセンスがあるかどうかを確認することができます。</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-ontap-onprem/images/tip.svg" alt="ヒント">
-</td>
-<td class="content">
-ノードベースライセンスの用語は、ライセンスの発行後 1 カ月目から始まります。たとえば、 2021 年 12 月 15 日にノードベースの BYOL ライセンスを取得すると、ライセンス期間は 2022 年 1 月 1 日（翌月の最初の日）から始まります。
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">手順</div>
-<ol class="arabic">
-<li>
-<p>Cloud Manager で、 * Discovery * タブをクリックします。</p>
-</li>
-<li>
-<p>ページの下部にある [<strong>Licenses</strong>] タブをクリックします。</p>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_aiq_licenses.png" alt="使用済みおよび未使用の Cloud Volumes ONTAP ライセンスのスクリーンショット。"></span></p>
-</div>
-<div class="paragraph">
-<p>使用されていないライセンスごとに * ライセンスを使用 * ボタンが表示されます。</p>
-</div>
-</li>
-<li>
-<p>ライセンスをアクティブ化して使用を開始する場合は、 * ライセンスを使用 * をクリックします。</p>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_aiq_use_license.png" alt="2 つのライセンス使用オプションのスクリーンショット。"></span></p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>使用可能なライセンスを使用するためのオプションについては、次のタスクを参照してください。</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="未使用の-cloud-volumes-ontap-ライセンスを使用している">未使用の Cloud Volumes ONTAP ライセンスを使用している</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>未使用のライセンスを使用して新しい Cloud Volumes ONTAP インスタンスを作成したり、既存の Cloud Volumes ONTAP インスタンスにライセンスの容量を拡張したりできます。ライセンスの容量は 368 TiB です。</p>
-</div>
-<div class="paragraph">
-<p>_expires_column は、ライセンスが最後にアクティブになった日を示します。新しい Cloud Volumes ONTAP システムを作成すると、ライセンスの有効期限が切れます。既存の Cloud Volumes ONTAP システムを更新する場合は、既存のライセンスが拡張される期間を指定します。</p>
-</div>
-<div class="paragraph">
-<p><em>License Type</em>'<em>Hyperscaler</em>'_Model Type_columns は ' その Cloud Volumes ONTAP ライセンスのタイプを表しますたとえば、 * BYOL | Single | Azure * は、「 Microsoft Azure 」に導入された「シングルノード」 Cloud Volumes ONTAP システムのライセンスを「お客様所有」のライセンスとして使用できることを意味します。この列に表示される値を表に示します。</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">列（ Column ）</th>
-<th class="tableblock halign-left valign-top">値</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ライセンスタイプ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">従量課金制</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ハイパースケーラ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Azure AWS GCP すべてのプロバイダ</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">モデルタイプ（ Model Type ）</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">単一 HA</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>_new_Cloud Volumes ONTAP システムを作成する場合は、導入するシステムのタイプを指定します。たとえば、サンプルライセンス（ * BYOL | Single | Azure * ）を使用すると、 Azure で最大 368 TiB の使用権を持つシングルノード Cloud Volumes ONTAP システムを作成できます。このライセンスは、 HA システムの作成や AWS へのインスタンスの導入には使用できません。</p>
-</div>
-<div class="paragraph">
-<p>既存の Cloud Volumes ONTAP システムを更新する場合は、既存のライセンスの拡張に対応できるシステムのタイプを示します。サンプルライセンスを再度使用して、 Azure 内の任意のシングルノード Cloud Volumes ONTAP システムのライセンスを拡張できます。このライセンスは、 HA システムまたは AWS に導入されているインスタンスのライセンスの拡張には使用できません。</p>
-</div>
-<div class="sect2">
-<h3 id="未使用の新しい-cloud-volumes-ontap-システムを作成します-使用許諾">未使用の新しい Cloud Volumes ONTAP システムを作成します 使用許諾</h3>
-<div class="paragraph">
-<p>未使用のライセンスで新しい Cloud Volumes ONTAP インスタンスを作成する手順は、次のとおりです。</p>
-</div>
-<div class="olist arabic">
-<div class="title">手順</div>
-<ol class="arabic">
-<li>
-<p>[ ライセンスの使用 ] をクリックし、 [ 新しい Cloud Volumes ONTAP * にライセンスを使用 ] を選択します。</p>
-</li>
-<li>
-<p>[ ライセンスの使用 &#8230;&#8203;] ページで、ライセンス情報を確認し、 [ ライセンスの使用 ] をクリックします。</p>
-<div class="paragraph">
-<p>ほとんどの場合、クラウドプロバイダとノード数の両方がライセンスで定義されているため、 Cloud Volumes ONTAP システムの作業環境を作成するための * 詳細とクレデンシャル * ページが表示されます。</p>
-</div>
-<div class="paragraph">
-<p>「すべてのプロバイダ」として定義されているライセンスを使用している場合は、「場所を選択」 * ページが表示されます。そのため、最初にクラウドプロバイダを選択してから、「 * 詳細とクレデンシャル * 」ページに進むことができます。</p>
-</div>
-</li>
-<li>
-<p>手順に従って、作業環境と最初のボリュームを作成します。</p>
-<div class="paragraph">
-<p>Cloud Volumes ONTAP システムを導入するクラウドプロバイダに応じて、次のセクションを参照してください。</p>
+<p>Cloud ManagerのAdvanced Viewでは、次の管理機能を使用できます。</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html" target="_blank" rel="noopener">"Azure で Cloud Volumes ONTAP を起動します"</a></p>
+<p>高度なストレージ管理</p>
+<div class="paragraph">
+<p>整合グループ、共有、qtree、クォータ、およびStorage VMの管理</p>
+</div>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html" target="_blank" rel="noopener">"AWS での Cloud Volumes ONTAP の起動"</a></p>
+<p>ネットワーク管理</p>
+<div class="paragraph">
+<p>IPspace、ネットワークインターフェイス、ポートセット、およびイーサネットポートを管理します。</p>
+</div>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html" target="_blank" rel="noopener">"GCP での Cloud Volumes ONTAP の起動"</a></p>
+<p>イベントとジョブ</p>
+<div class="paragraph">
+<p>イベントログ、システムアラート、ジョブ、および監査ログを表示します。</p>
+</div>
+</li>
+<li>
+<p>高度なデータ保護</p>
+<div class="paragraph">
+<p>Storage VM、LUN、および整合グループを保護する。</p>
+</div>
+</li>
+<li>
+<p>ホスト管理</p>
+<div class="paragraph">
+<p>SANイニシエータグループとNFSクライアントを設定します。</p>
+</div>
 </li>
 </ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="既存の-cloud-volumes-ontap-のライセンス容量を拡張する-システム">既存の Cloud Volumes ONTAP のライセンス容量を拡張する システム</h3>
-<div class="paragraph">
-<p>現在導入されている Cloud Volumes ONTAP システムが、いずれかの空きライセンス（同じクラウドプロバイダ、ノード数など）のライセンス要件に一致する場合は、次の手順に従ってライセンスの容量を 368 TiB 拡張できます。</p>
-</div>
-<div class="olist arabic">
-<div class="title">手順</div>
-<ol class="arabic">
-<li>
-<p>[ ライセンスの使用 ] をクリックし、 [ 既存の Cloud Volumes ONTAP にライセンスを追加 ] を選択します。</p>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_aiq_extend_license.png" alt="既存の Cloud Volumes ONTAP システムにライセンスを追加するためのライセンスの追加ダイアログのスクリーンショット。"></span></p>
-</div>
-</li>
-<li>
-<p>[ ライセンスの追加 &#8230;&#8203;] ページで、ライセンスを拡張する Cloud Volumes ONTAP システムを選択し、 [ ライセンスの追加 ] をクリックします。</p>
-<div class="paragraph">
-<p>確認ダイアログが表示されます。</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_aiq_license_added.png" alt="ライセンスが Cloud Volumes ONTAP システムに追加されたことを示すスクリーンショット。"></span></p>
-</div>
-</li>
-<li>
-<p>[* 閉じる ] をクリックすると、ウィンドウを閉じて [ 検出 ] ページに戻ることができます。または、リンクをクリックして Cloud Volumes ONTAP ライセンスページに移動し、そのシステムのライセンスの詳細を表示することもできます。</p>
-</li>
-</ol>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="新しいディスクおよびシェルフファームウェアをダウンロードしています">新しいディスクおよびシェルフファームウェアをダウンロードしています</h2>
+<h2 id="サポートされている構成">サポートされている構成</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>検出された ONTAP クラスタのいずれかで、シェルフまたはディスクのファームウェアを更新する必要があるかどうかを確認できます。また、 Ansible プレイブックをダウンロードしてファームウェアをアップグレードできます。</p>
+<p>System Managerによる高度な管理は、9.10.0以降を実行しているオンプレミスのONTAP クラスタでサポートされます。</p>
+</div>
+<div class="paragraph">
+<p>GovCloudリージョンまたはアウトバウンドのインターネットアクセスがないリージョンでは、System Managerの統合はサポートされません。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="制限">制限</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud ManagerのAdvanced Viewを使用する場合、オンプレミスのONTAP クラスタではいくつかのSystem Manager機能はサポートされません。</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>注： * 新しいファームウェアを表示およびダウンロードできるのは、特定のサポートプランに登録している場合のみです。</p>
+<p>クラスタセットアップ</p>
+<div class="paragraph">
+<p>管理IPアドレスを設定して、オンプレミスのONTAP クラスタで管理パスワードを設定したら、Cloud Managerでクラスタを検出し、アドバンストビューからクラスタのセットアップを続行できます。</p>
+</div>
+</li>
+<li>
+<p>Cloud Backupのアクティブ化</p>
+<div class="paragraph">
+<p>オンプレミスクラスタでCloud BackupをCloud Backupから直接有効にします。 <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html" target="_blank" rel="noopener">"開始方法をご確認ください"</a>。</p>
+</div>
+</li>
+<li>
+<p>オンデマンドアップグレード</p>
+<div class="paragraph">
+<p>ファームウェアとソフトウェアのオンデマンドアップグレードは利用できません。</p>
+</div>
+</li>
+<li>
+<p>ロールベースアクセス制御</p>
+<div class="paragraph">
+<p>System Managerからのロールベースアクセス制御はサポートされません。</p>
+</div>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="開始方法">開始方法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>オンプレミスのONTAP 作業環境を開き、[詳細ビュー]オプションをクリックします。</p>
 </div>
 <div class="olist arabic">
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>[Discovery] （検出）ページで、 [* Firmware Updates] （ファームウェアアップデート）タブをクリックします。</p>
+<p>キャンバスページで、オンプレミスのONTAP 作業環境の名前をダブルクリックします。</p>
+</li>
+<li>
+<p>右上の*[拡張表示に切り替える]をクリックします。</p>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_aiq_firmware.png" alt="ファームウェアの更新が必要なノードを示す検出ページのスクリーンショット。"></span></p>
-</div>
-<div class="paragraph">
-<p>新しいファームウェアを必要とするクラスタがある場合は、「すべてをダウンロード」ボタンが表示されます。</p>
+<p><span class="image"><img src="./media/screenshot-advanced-view.png" alt="&quot;[詳細表示に切り替える"></span>オプションを示すオンプレミスのONTAP 作業環境のスクリーンショット。"]</p>
 </div>
 </li>
 <li>
-<p>[ すべてダウンロード ] をクリックし、 zip ファイルを保存します。</p>
+<p>確認メッセージが表示されたら、そのメッセージを読み、*閉じる*をクリックします。</p>
 </li>
 <li>
-<p>zip ファイルを解凍し、次の手順を参照してください <a href="https://aiq.netapp.com/assets/docs/Quick_Reference_Guide.pdf" target="_blank" rel="noopener">"ストレージシステムのファームウェアを更新します"</a>。</p>
+<p>System Managerを使用してONTAP を管理する。</p>
+</li>
+<li>
+<p>必要に応じて、* Standard Viewに切り替え*をクリックして、Cloud Managerを使用した標準的な管理に戻ります。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot-standard-view.png" alt="標準ビューに切り替えオプションを示すオンプレミスのONTAP 作業環境のスクリーンショット。"></span></p>
+</div>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>ファームウェアが更新されました。ONTAP システムから次回 Active IQ に AutoSupport メッセージが送信されると、 <em>Firmware Updates</em> ページのステータスが更新され、更新が不要であることが示されます。</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="クラウドの候補となるオンプレミスのワークロードを表示します">クラウドの候補となるオンプレミスのワークロードを表示します</h2>
+<h2 id="system-managerの使用方法に関するヘルプ">System Managerの使用方法に関するヘルプ</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>特定のワークロードやボリュームを、オンプレミスの ONTAP クラスタから Cloud Volumes ONTAP システムに移行するのに最適です。このようなメリットには、コストの削減、パフォーマンスと耐障害性の向上などがあります。_ クラウド対応ワークロード _ タブには、検出された ONTAP クラスタからのこれらのワークロードのリストが表示されます。</p>
+<p>ONTAP でSystem Managerを使用する際にサポートが必要な場合は、を参照してください <a href="https://docs.netapp.com/us-en/ontap/index.html" target="_blank" rel="noopener">"ONTAP のドキュメント"</a> を参照してください。役立つリンクをいくつか紹介します。</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_aiq_workloads.png" alt="クラウドに移動可能なオンプレミスクラスタのワークロードを示すスクリーンショット。"></span></p>
-</div>
-<div class="paragraph">
-<p>このページでは、 SAP 、 SAP HANA 、 Oracle 、ファイル共有、 SharePoint などのサポート対象ワークロードを参照できます。</p>
-</div>
-<div class="paragraph">
-<p>_ 移行と切り替え _ は、アプリケーションをクラウドに移行するためのアプローチです。つまり、アプリケーションとそれに関連するデータを、アプリケーションの設計を変更することなくクラウドプラットフォームに移動することを意味します。詳細については、を参照してください <a href="https://www.netapp.com/knowledge-center/what-is-lift-and-shift/" target="_blank" rel="noopener">"持ち上げてシフトします"</a>。</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap/volume-admin-overview-concept.html" target="_blank" rel="noopener">"ボリュームとLUNの管理"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap/network-manage-overview-concept.html" target="_blank" rel="noopener">"Network Management の略"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap/concept_dp_overview.html" target="_blank" rel="noopener">"データ保護"</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
