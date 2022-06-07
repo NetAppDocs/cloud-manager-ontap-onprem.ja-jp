@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: task-administer-advanced-view.html 
+keywords: system manager, advanced view, access system manager, load system manager, use system manager 
+summary: オンプレミスのONTAP クラスタに対して高度な管理を実行する必要がある場合は、ONTAP システムに付属の管理インターフェイスであるONTAP System Managerを使用できます。高度な管理のためにCloud Managerを終了する必要がないように、Cloud ManagerのインターフェイスはCloud Managerに直接組み込まれています。 
+---
+= 拡張ビューを使用してONTAP を管理します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+オンプレミスのONTAP クラスタに対して高度な管理を実行する必要がある場合は、ONTAP システムに付属の管理インターフェイスであるONTAP System Managerを使用できます。高度な管理のためにCloud Managerを終了する必要がないように、Cloud ManagerのインターフェイスはCloud Managerに直接組み込まれています。
+
+この拡張ビューはプレビューとして使用できます。今後のリリースでは、この点をさらに改良し、機能を強化する予定です。製品内のチャットでご意見をお寄せください。
+
+
+
+== の機能
+
+Cloud ManagerのAdvanced Viewでは、次の管理機能を使用できます。
+
+* 高度なストレージ管理
++
+整合グループ、共有、qtree、クォータ、およびStorage VMの管理
+
+* ネットワーク管理
++
+IPspace、ネットワークインターフェイス、ポートセット、およびイーサネットポートを管理します。
+
+* イベントとジョブ
++
+イベントログ、システムアラート、ジョブ、および監査ログを表示します。
+
+* 高度なデータ保護
++
+Storage VM、LUN、および整合グループを保護する。
+
+* ホスト管理
++
+SANイニシエータグループとNFSクライアントを設定します。
+
+
+
+
+
+== サポートされている構成
+
+System Managerによる高度な管理は、9.10.0以降を実行しているオンプレミスのONTAP クラスタでサポートされます。
+
+GovCloudリージョンまたはアウトバウンドのインターネットアクセスがないリージョンでは、System Managerの統合はサポートされません。
+
+
+
+== 制限
+
+Cloud ManagerのAdvanced Viewを使用する場合、オンプレミスのONTAP クラスタではいくつかのSystem Manager機能はサポートされません。
+
+* クラスタセットアップ
++
+管理IPアドレスを設定して、オンプレミスのONTAP クラスタで管理パスワードを設定したら、Cloud Managerでクラスタを検出し、アドバンストビューからクラスタのセットアップを続行できます。
+
+* Cloud Backupのアクティブ化
++
+オンプレミスクラスタでCloud BackupをCloud Backupから直接有効にします。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["開始方法をご確認ください"^]。
+
+* オンデマンドアップグレード
++
+ファームウェアとソフトウェアのオンデマンドアップグレードは利用できません。
+
+* ロールベースアクセス制御
++
+System Managerからのロールベースアクセス制御はサポートされません。
+
+
+
+
+
+== 開始方法
+
+オンプレミスのONTAP 作業環境を開き、[詳細ビュー]オプションをクリックします。
+
+.手順
+. キャンバスページで、オンプレミスのONTAP 作業環境の名前をダブルクリックします。
+. 右上の*[拡張表示に切り替える]をクリックします。
++
+image:screenshot-advanced-view.png["[詳細表示に切り替える]オプションを示すオンプレミスのONTAP 作業環境のスクリーンショット。"]
+
+. 確認メッセージが表示されたら、そのメッセージを読み、*閉じる*をクリックします。
+. System Managerを使用してONTAP を管理する。
+. 必要に応じて、* Standard Viewに切り替え*をクリックして、Cloud Managerを使用した標準的な管理に戻ります。
++
+image:screenshot-standard-view.png["標準ビューに切り替えオプションを示すオンプレミスのONTAP 作業環境のスクリーンショット。"]
+
+
+
+
+
+== System Managerの使用方法に関するヘルプ
+
+ONTAP でSystem Managerを使用する際にサポートが必要な場合は、を参照してください https://docs.netapp.com/us-en/ontap/index.html["ONTAP のドキュメント"^] を参照してください。役立つリンクをいくつか紹介します。
+
+* https://docs.netapp.com/us-en/ontap/volume-admin-overview-concept.html["ボリュームとLUNの管理"^]
+* https://docs.netapp.com/us-en/ontap/network-manage-overview-concept.html["Network Management の略"^]
+* https://docs.netapp.com/us-en/ontap/concept_dp_overview.html["データ保護"^]
+

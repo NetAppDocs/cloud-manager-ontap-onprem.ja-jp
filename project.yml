@@ -10,8 +10,6 @@ settings:
   langs: ja-jp,us-en,zh-cn,zh-tw,ko-kr
 sidebar:
   entries:
-  - title: Cloud Manager のすべてのドキュメント
-    url: https://docs.netapp.com/us-en/cloud-manager-family
   - title: オンプレミスの ONTAP クラスタのドキュメント
     url: "/index.html"
   - title: リリースノート
@@ -24,6 +22,8 @@ sidebar:
     entries:
     - title: オンプレミスの ONTAP ボリュームを管理
       url: "/task-provisioning-ontap.html"
+    - title: System Managerを使用して管理
+      url: "/task-administer-advanced-view.html"
     - title: Active IQ Digital Advisor を使用してクラスタを最適化します
       url: "/concept-aiq-digital-advisor.html"
     - title: Active IQ データを使用してクラスタを管理します
@@ -65,3 +65,4 @@ homepage:
 product-family:
   name: Cloud Manager
   repo: cloud-manager-family
+  sidebar_label: All Cloud Manager documentation

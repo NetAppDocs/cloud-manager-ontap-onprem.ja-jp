@@ -256,29 +256,6 @@
   <block id="06ed7fc16cefcce74b94962584869b39" category="paragraph"><block ref="240bb627dd9982017efa6d3b711a39ad" category="inline-link-rx"></block>。</block>
   <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">ネットアップでは、 Cloud Manager をさまざまな方法でサポートしています。ナレッジベース（ KB ）記事やコミュニティフォーラムなど、 24 時間 365 日利用可能な幅広いセルフサポートオプションをご用意しています。サポート登録には、 Web チケット処理によるリモートテクニカルサポートが含まれます。</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">ヘルプを表示します</block>
-  <block id="b151b3ad7000d170a09f91975e26bf45" category="summary">オンプレミスの ONTAP システムに対して高度な管理を実行する必要がある場合は、 ONTAP システムマネージャまたはコマンドラインインターフェイスを使用できます。</block>
-  <block id="6d0824d1c808525b64d6b584ae3a8175" category="doc">オンプレミスの ONTAP システムに接続</block>
-  <block id="bd6791b739d936827d0be68a00c193da" category="section-title">System Manager に接続します</block>
-  <block id="e9981bacbcd5ea480a3cacf7d804b6cc" category="paragraph">一部のオンプレミス ONTAP タスクを、クラスタ上で実行されるブラウザベースの管理ツールである System Manager から実行しなければならない場合があります。</block>
-  <block id="ec94e3c72dd4a57a61fc48219f606995" category="paragraph">Cloud Manager にアクセスするコンピュータに、オンプレミスの ONTAP システムへのネットワーク接続が必要です。たとえば、オンプレミスネットワークにあるジャンプホストから Cloud Manager へのログインが必要になることがあります。</block>
-  <block id="b942f0c9a0122357a68d35d76ab18fff" category="list-text">キャンバスページで、 System Manager で管理するオンプレミス ONTAP システムをダブルクリックします。</block>
-  <block id="cb4fcd5786332ca0e73ec9ae0b1d43e7" category="list-text">メニューアイコンをクリックし、 * System Manager * をクリックします。</block>
-  <block id="3eab8ee0f45fd9624973c05ec4303d5a" category="list-text">[* 起動 * ] をクリックします。</block>
-  <block id="7587c6609566a034156659b2141e3de1" category="paragraph">System Manager が新しいブラウザタブにロードされます。</block>
-  <block id="84a670db3237cb6e7874ef079ba39fe4" category="list-text">ログイン画面で、クラスタの作成時に指定した管理者ユーザのユーザ名とパスワードを入力し、 * サインイン * をクリックします。</block>
-  <block id="304e0c9f87006647e7b7cb69233dbe66" category="paragraph">System Manager コンソールがロードされます。これで、オンプレミスの ONTAP システムの管理に使用できるようになります。</block>
-  <block id="31c2c11de9569969822fd820af45d8ac" category="section-title">ONTAP CLI に接続します</block>
-  <block id="4e107e465b3e776fcb07ca6e5f56265f" category="paragraph">ONTAP の CLI では、すべての管理コマンドを実行できます。高度なタスクを実行する場合や、 CLI を使い慣れている場合は、 CLI の使用を推奨します。Secure Shell （ SSH ）を使用して CLI に接続できます。</block>
-  <block id="e6ad06bd1420173d20b58a9a17dd8153" category="paragraph">SSH を使用してオンプレミスの ONTAP システムに接続するホストに、オンプレミスの ONTAP システムへのネットワーク接続が必要です。たとえば、オンプレミスネットワーク内のジャンプホストから SSH を使用する場合などです。</block>
-  <block id="6ad94be4e63b3d4783fdd1f854b7bbdf" category="list-text">Cloud Manager で、クラスタ管理インターフェイスの IP アドレスを特定します。</block>
-  <block id="4820059dd9647a62e3d49d6805dc17ef" category="list-text">キャンバスページで、オンプレミスの ONTAP システムを選択します。</block>
-  <block id="23c2e641ffa866a42c848c9f2c90ecd1" category="list-text">をクリックします <block ref="a74720392297d66ac1ab9a90296912c9" category="inline-image-macro-rx" type="image"></block> 右側のペインで、クラスタ管理 IP アドレスをコピーします。</block>
-  <block id="58cab5452c4b6c92c8dd75e357433c83" category="list-text">SSH を使用して、 admin アカウントを使用してクラスタ管理インターフェイスの IP アドレスに接続します。</block>
-  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 例 *</block>
-  <block id="ed9663bc6832f99d5a7f57ceca04eed7" category="paragraph">次の図は、 PuTTY を使用した例を示しています。</block>
-  <block id="a9981641e36e0e304ba5071a1d3b4273" category="inline-image-macro">ポート 22 の宛先 admin@192.168.11 のスクリーンショット。</block>
-  <block id="7a9bcdad1d59400ff7c688cda722d3e6" category="paragraph"><block ref="7a9bcdad1d59400ff7c688cda722d3e6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2180cb7bd670dcd385a7b5e609212943" category="list-text">ログインプロンプトで、 admin アカウントのパスワードを入力します。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
   <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9 に関する注意事項</block>
   <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
@@ -311,7 +288,6 @@
   <block id="21f0ca98c05681847062cb25ecc8fb48" category="paragraph">を参照してください<block ref="2abfe6afa62505308fadab43da217548" category="inline-link-rx"></block> を参照してください。</block>
   <block id="def39ca4f33907811340e246db3f16d2" category="summary">Cloud Manager を使用して NetApp AFF システムと FAS システムを管理し、ストレージのプロビジョニング、データのレプリケート、重要なクラウドベースデータサービスの設定を行います。</block>
   <block id="2631cea4d4184b173c4d7b153d959556" category="doc">オンプレミスの ONTAP クラスタに関するドキュメント</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">Cloud Manager のすべてのドキュメント</block>
   <block id="9a30b78b07a6b42c9e4998f9c5d5640f" category="sidebar">オンプレミスの ONTAP クラスタのドキュメント</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">リリースノート</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">はじめに</block>
@@ -320,13 +296,11 @@
   <block id="8ad62e3eb63519f91a079cc6e3b60ae4" category="sidebar">オンプレミスの ONTAP ボリュームを管理</block>
   <block id="b23da3dd5cacf822f40ae17bb33e9245" category="sidebar">Active IQ Digital Advisor を使用してクラスタを最適化します</block>
   <block id="0edf67a4be59f702b9420db43194ad29" category="sidebar">Active IQ データを使用してクラスタを管理します</block>
-  <block id="81563192c68b08feebdcc9a64a5e510b" category="sidebar">オンプレミスクラスタに接続</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
   <block id="72d4138d424c03eaee16ca8b76b4263d" category="sidebar">検出されたオンプレミスクラスタと検出されていないオンプレミスクラスタを表示</block>
   <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="sidebar">新機能</block>
   <block id="1c27e11c5e65b93611e6f5ce640f8184" category="sidebar">ボリュームを作成します</block>
   <block id="ef8e14c9c12dfb15fa021d5c96021bb8" category="sidebar">新しいディスクファームウェアとシェルフファームウェアをダウンロードします</block>
-  <block id="daefd0b150727ca9436d0c950172fd71" category="sidebar">System Manager と CLI を使用して、オンプレミスの ONTAP システムを管理します</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">ブログコミュニティ</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">ネットアップコミュニティ</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central のブログです</block>
@@ -388,4 +362,59 @@
   <block id="bece28b158ab337d9ed24b00d7d02cc7" category="list-text">[ * お問い合わせ * ] をクリックして、ネットアップ・テクニカル・サポートの電話番号を検索してください。</block>
   <block id="efe81cff8e6f47ec59ef94167b76bf5a" category="list-text">[ * 問題 を開く * ] をクリックし、いずれかのオプションを選択して、 [ * 送信 * ] をクリックします。</block>
   <block id="cbb1040836732e478409dacf7e45171a" category="paragraph">ネットアップの担当者がケースを確認し、すぐに対応を開始します。</block>
+  <block id="f8b475a3fefebada77a30229238d0a1a" category="section-title">2022年6月7日</block>
+  <block id="4f03a5c652641013d1e43811930f5769" category="paragraph">コネクタの3.9.19リリースでは、次の変更が加えられました。</block>
+  <block id="ffe3ec3b5faef58a758d9449470882a0" category="section-title">新しい詳細ビュー</block>
+  <block id="5549a52d6578bcb66138c7319ef4ea11" category="paragraph">オンプレミスのONTAP クラスタに対して高度な管理を実行する必要がある場合は、ONTAP システムに付属の管理インターフェイスであるONTAP System Managerを使用できます。高度な管理のためにCloud Managerを終了する必要がないように、Cloud ManagerのインターフェイスはCloud Managerに直接組み込まれています。</block>
+  <block id="99721ad2e6d601b2966a9d9e1c7de770" category="paragraph">この詳細ビューは、9.10.0以降を実行するオンプレミスのONTAP クラスタでプレビューとして使用できます。今後のリリースでは、この点をさらに改良し、機能を強化する予定です。製品内のチャットでご意見をお寄せください。</block>
+  <block id="f303a87fe6efba259b752f5a9e11064b" category="inline-link-macro">詳細については、「詳細ビュー」を参照してください</block>
+  <block id="0c6e9220b6dd38f763ce6082c0125be9" category="paragraph"><block ref="cf41d716430563f350a841f38af568db" category="inline-link-macro-rx"></block>。</block>
+  <block id="d7ce0ccf910efd77ec00e6d9bde719ca" category="doc">拡張ビューを使用してONTAP を管理します</block>
+  <block id="74593b49f99b6e21d38ca3d969b213f3" category="paragraph">この拡張ビューはプレビューとして使用できます。今後のリリースでは、この点をさらに改良し、機能を強化する予定です。製品内のチャットでご意見をお寄せください。</block>
+  <block id="98a1dd953dfcb1729fd4013fc440cb56" category="paragraph">Cloud ManagerのAdvanced Viewでは、次の管理機能を使用できます。</block>
+  <block id="f3c3ee89c80d32726f5f937c07631d1c" category="list-text">高度なストレージ管理</block>
+  <block id="81988711ef6c9af40c8e8973f25c0bed" category="paragraph">整合グループ、共有、qtree、クォータ、およびStorage VMの管理</block>
+  <block id="62735a856683757bf28f1f02f97c151c" category="list-text">ネットワーク管理</block>
+  <block id="90aa7b1e6da20918b753d835fd9d28fb" category="paragraph">IPspace、ネットワークインターフェイス、ポートセット、およびイーサネットポートを管理します。</block>
+  <block id="5da3380058f326675f5268466ae0c24f" category="list-text">イベントとジョブ</block>
+  <block id="59536015b2a8a8d499cbe947387acb5e" category="paragraph">イベントログ、システムアラート、ジョブ、および監査ログを表示します。</block>
+  <block id="3f20b3134627198be1e0ff879a88cd8f" category="list-text">高度なデータ保護</block>
+  <block id="18edb92cf2cbf5a1d60be48cff4de617" category="paragraph">Storage VM、LUN、および整合グループを保護する。</block>
+  <block id="f17e729a409e6c0faa3ddab50e856b07" category="list-text">ホスト管理</block>
+  <block id="36eae32729ecc4b53ba38b252bc6b356" category="paragraph">SANイニシエータグループとNFSクライアントを設定します。</block>
+  <block id="1f0b82560627b660c6c6958a1df834b8" category="section-title">サポートされている構成</block>
+  <block id="8cc569c03bd345c450afe055c793f724" category="paragraph">System Managerによる高度な管理は、9.10.0以降を実行しているオンプレミスのONTAP クラスタでサポートされます。</block>
+  <block id="0f1ca4e2133610fdc8b23e4db3f7cb0c" category="paragraph">GovCloudリージョンまたはアウトバウンドのインターネットアクセスがないリージョンでは、System Managerの統合はサポートされません。</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">制限</block>
+  <block id="1cca9df183cdd1916b224eb02b7018d7" category="paragraph">Cloud ManagerのAdvanced Viewを使用する場合、オンプレミスのONTAP クラスタではいくつかのSystem Manager機能はサポートされません。</block>
+  <block id="e710f9addfdf1e48c1320d497696c4fc" category="list-text">クラスタセットアップ</block>
+  <block id="95bf9ececffac617e1447cb41cbed6ca" category="paragraph">管理IPアドレスを設定して、オンプレミスのONTAP クラスタで管理パスワードを設定したら、Cloud Managerでクラスタを検出し、アドバンストビューからクラスタのセットアップを続行できます。</block>
+  <block id="bec7e4750178c449b47b3663cb2804ea" category="list-text">Cloud Backupのアクティブ化</block>
+  <block id="7d782479a41a3941b57cc7c2b60d318a" category="inline-link">開始方法をご確認ください</block>
+  <block id="4bd7d8add0f25e108898d306e19a3841" category="paragraph">オンプレミスクラスタでCloud BackupをCloud Backupから直接有効にします。<block ref="d78fdae783f693d400093119494a670a" category="inline-link-rx"></block>。</block>
+  <block id="dc7f30ec5bd878efd2189fe1b0703118" category="list-text">オンデマンドアップグレード</block>
+  <block id="729efe039f733cfbcd1a94fd02a8b2c6" category="paragraph">ファームウェアとソフトウェアのオンデマンドアップグレードは利用できません。</block>
+  <block id="01ab8fe0565c01eb93456b579d969d66" category="list-text">ロールベースアクセス制御</block>
+  <block id="83f5656d14cbf1628e806237dd016ac6" category="paragraph">System Managerからのロールベースアクセス制御はサポートされません。</block>
+  <block id="07e1d66babe77070cc76a4e637c9f26d" category="section-title">開始方法</block>
+  <block id="bbd3883401d7cab6239afc1bb95269c5" category="paragraph">オンプレミスのONTAP 作業環境を開き、[詳細ビュー]オプションをクリックします。</block>
+  <block id="30712363115d96bac17774981ad3a874" category="list-text">キャンバスページで、オンプレミスのONTAP 作業環境の名前をダブルクリックします。</block>
+  <block id="a31b079030fd3d406e06a9ce180abf58" category="list-text">右上の*[拡張表示に切り替える]をクリックします。</block>
+  <block id="0966bd9c118ee81138ac447c7ed4a14f" category="inline-image-macro">[詳細表示に切り替える]オプションを示すオンプレミスのONTAP 作業環境のスクリーンショット。</block>
+  <block id="6665a86ade0699adb15fb4e2f3d44fbb" category="paragraph"><block ref="6665a86ade0699adb15fb4e2f3d44fbb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="74d668d6c47cd0c55c4ff8f77ad621bd" category="list-text">確認メッセージが表示されたら、そのメッセージを読み、*閉じる*をクリックします。</block>
+  <block id="2384fee5ec28c392c4824455705673ad" category="list-text">System Managerを使用してONTAP を管理する。</block>
+  <block id="ebd8c98f714943a83d08bf245c867de2" category="list-text">必要に応じて、* Standard Viewに切り替え*をクリックして、Cloud Managerを使用した標準的な管理に戻ります。</block>
+  <block id="54cf4bb0cf2034f534f1bd85ab4a6bb0" category="inline-image-macro">標準ビューに切り替えオプションを示すオンプレミスのONTAP 作業環境のスクリーンショット。</block>
+  <block id="922a5d434113f5026172e4d3ab5969a9" category="paragraph"><block ref="922a5d434113f5026172e4d3ab5969a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9091c5cdacecb3d4082594d5d5a31855" category="section-title">System Managerの使用方法に関するヘルプ</block>
+  <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">ONTAP のドキュメント</block>
+  <block id="9c1bd416df0d466347865d11e934dec2" category="paragraph">ONTAP でSystem Managerを使用する際にサポートが必要な場合は、を参照してください<block ref="e4712fca3ed0fd9138bc58dbf36327e9" category="inline-link-rx"></block> を参照してください。役立つリンクをいくつか紹介します。</block>
+  <block id="b9cf2d579e6b088870d384fe9910b52f" category="inline-link">ボリュームとLUNの管理</block>
+  <block id="8fc667c489390551a74eb985b297d37a" category="list-text"><block ref="8fc667c489390551a74eb985b297d37a" category="inline-link-rx"></block></block>
+  <block id="3e49e5936cffd2e96856c25fa0417df2" category="inline-link">Network Management の略</block>
+  <block id="57614f27dec39901199cca4b61cebfe9" category="list-text"><block ref="57614f27dec39901199cca4b61cebfe9" category="inline-link-rx"></block></block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="inline-link">データ保護</block>
+  <block id="168463a2e30ac746441036fb49df730e" category="list-text"><block ref="168463a2e30ac746441036fb49df730e" category="inline-link-rx"></block></block>
+  <block id="e9c2ec7472702d9e84d77a3ecb12f454" category="sidebar">System Managerを使用して管理</block>
 </blocks>
